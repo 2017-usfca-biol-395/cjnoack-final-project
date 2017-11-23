@@ -2,7 +2,7 @@
 ## Complete draft due as a pull request on Monday, December 4th, 2017 before 11:59 pm
 ## Complete, revised draft due by Thursday, December 14th, 2017 before 11:59 pm
 
-The **goal of this final project** is to have you apply all of the skills you have learned build your skills in R, markdown, scientific writing, and exploratory data analysis to write a report in the style of a scientific manuscript, based on your novel analyses of these data.
+The **goal of this final project** is to have you apply all of the skills you have learned build your skills in R, markdown, scientific writing, and exploratory data analysis to write a report in the style of a scientific manuscript, based on your novel analyses of a dataset of your choosing.
 
 You will each be using the dataset you chose and described in your short project proposal.
 
