@@ -9,6 +9,12 @@ bibliography: references.bib
 csl: bioinformatics.csl
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
 # Introduction
 
 Add about 2-3 pages here. Across the whole manuscript, you should cite at least 20 peer reviewed articles.
@@ -31,13 +37,92 @@ These are the methods you used to do your bioinformatic analyses analyses. Shoul
 
 ## Subsections are ok in the results section too
 
-```{r your-code-here}
-# Add code chunks as needed for your analyses
-# For most analyses, I would recommend splitting the
-# intensive computational part into a seperate R script file
-# and then just load your libraries and the data object here
-# using the `load()` function. Ask me for clarification if this is
-# unclear.
+```{r load-libraries, echo=FALSE, message = FALSE}
+# Be sure to install these packages before running this script
+# They can be installed either with the intall.packages() function
+# or with the 'Packages' pane in RStudio
+
+# load general-use packages
+library("dplyr")
+library("tidyr")
+library("knitr")
+library("ggplot2")
+
+# this package allows for the easy inclusion of literature citations in our Rmd
+# more info here: https://github.com/crsh/citr
+# and here:
+# http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+library("citr")
+
+# These are the primary packages well use to clean and analyze the data
+# this package needs to be installed from bioconductor -- it's not on CRAN
+# see info here: https://benjjneb.github.io/dada2/dada-installation.html
+library("dada2")
+
+# This to export a fasta of our final denoised sequence variants
+library("seqinr")
+
+# To install this you have to install from GitHub
+# See more info here: https://github.com/leffj/mctoolsr
+# run this -- install.packages("devtools")
+# and then this -- devtools::install_github("leffj/mctoolsr")
+library("mctoolsr")
+
+# And this to visualize our results
+# it also needs to be installed from bioconductor
+library("phyloseq")
+
+# Install devtools package
+devtools::install_github("ropenscilabs/gramr")
+```
+
+```{r}
+load ("output/phyloseqobject.RData")
+```
+
+```{r meltedtable, echo=FALSE}
+# Compile into a table
+melted_obj <- psmelt(phyloseq_obj)
+```
+
+```{r}
+# COMMENT HERE
+ggplot(data=melted_obj, 
+          aes(x=host_sex_s, y=Abundance)) +
+  geom_point() +
+  facet_grid(. ~ host_phenotype_s)
+```
+
+**Figure 1:** 
+
+```{r}
+# Bar plot code with a grid, can analyze sample by sample!
+ggplot(data=melted_obj, 
+          aes(x=host_sex_s, y=Abundance)) +
+  geom_point() +
+  facet_grid(. ~ Phylum)
+```
+
+```{r make-barplot-of-smokingstatus, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+melted_obj %>%
+  ggplot(aes(x = host_phenotype_s,
+             y = host_age_s,
+             fill = host_sex_s)) +
+    geom_col(position = "dodge")
+```
+
+```{r make-barplot-of-smokingstatus, echo = FALSE}
+# this code uses the same data as above, but use it to make a
+# barplot - remember geom_col() is just like
+# when you use geom_bar(stat = "identity")
+melted_obj %>%
+  ggplot(aes(x = host_phenotype_s,
+             y = host_age_s,
+             fill = Phylum)) +
+    geom_col(position = "dodge")
 ```
 
 In addition to a minimum of 5-10 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion. 2-3 pages.
