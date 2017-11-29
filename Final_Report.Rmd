@@ -37,9 +37,12 @@ Cats which were lean and both neutered or not neutered housed together. All had 
 The obese, neutered cats underwent castration/spaying 1-6 years before the study [@fischer2017effects]. Unlike the lean cats, the obese cats slept alone. The obese neutered ate the normal diet given to all cats for ten days. For six weeks, they ate 60-70% of the prior intake. Again, unlike the lean cats, their intake was now measured. Fischer et al. recorded the cats' weights every week. They also recorded fecal samples before and after the dietary restriction began [@fischer2017effects].
 
 ## Sample origin and sequencing
-REFERENCE: 250 words = 1/2 page
 
-Add about half a page here. In this section instead of first person (I/we), use the authors of the paper you selected, since you'll just be describing what they did, based on the methods in their paper.
+Before sequencing the data, Fischer et al. collected fecal samples from the cat litter box once a day for three days straight. They monitored the cats and they did not collect any samples which were 15 minutes old. To get the bacterial DNA, Fischer et al. used bead-beating methods. Bead-beating is a way to release DNA, RNA, and proteins in the cells of a sample. They used a commercial DNA extraction kit [@fischer2017effects]. To bead-beat, samples go in tubes then on a homogenizer. A homogenizer which is a lab tool used to mix materials using high energy. They mixed "for 60 seconds at a speed of 4 m/s" [@fischer2017effects].
+
+The 16S rRNA amplified using a universal bacterial primer. A universal bacterial primers is important to interpret PCR results. Especially for microbial communities [@mao2012coverage]. PCR (polymerase chain reaction)  is a technique used to make a lot of copies of a segment of DNA. 
+
+After PCR amplification, Fischer et al. added amplicon products of different samples. They purified the samples using AgencourtAmpure beads. The beads were important for high-throughput purification of the PCR amplicons. Then the samples combined in equal concentrations. Fischer et al. sequenced th samples using Roche 454 FLX titanium instruments [@fischer2017effects]. Pyrosequencing using instruments like Roche 454 have big advantages versus traditional Sanger sequencing. Primarily because they can examine many samples from many microbial communities [@tamaki2011analysis]. Once the raw sequences were complete, I downloaded them for my analysis. I downloaded them from NCBI’s Sequence Read Archive (http://www.ncbi.nlm.nih.gov/Traces/ sra) under accession no. SRP066010. 
 
 ## Computational
 REFERENCE: 250-500 words
