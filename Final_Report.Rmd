@@ -1,7 +1,7 @@
 ---
-title: "Final Report: Your Title Here"
-author: "Don Francisco"
-date: "November 22, 2017"
+title: "Final Report: The Effects of Neutering on Female and Male Adult Cats"
+author: "Chelsea Noack"
+date: "November 29, 2017"
 output:
     github_document: default
     word_document: default
@@ -20,6 +20,7 @@ REFERENCE: 2-3 pages will be 1000-1500
 - Domestication of cats
 - Our love for cats
 - Being obese, as well as for humans, will cause early death, include statistics
+- **HYPOTHESIS**: Females will be larger overall, especially after neutering, than male cats. This puts female cats at a severe disadavntage. 
 - What if it's not just diet? Does neutering play a role? Population control is important too. Here I ask if there are particular bacterias within striclty obese, neutered cats that is preventing them from maintaining a healthy weight? If so, can this lead to a positive medication which can be administered to the cats?
 - In the study by so and so, they studied intact and neutered cats in order to find a connection between obesity and being neutered.
 
@@ -91,7 +92,6 @@ devtools::install_github("ropenscilabs/gramr")
 ```{r}
 load("output/phyloseqobject.RData")
 ```
-
 ```{r meltedtable, echo=FALSE}
 # Compile into a table
 melted_obj <- psmelt(phyloseq_obj)
@@ -149,6 +149,32 @@ ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s))
 
 **Figure 5**: A density plot of host's total mass to its phenotype. 
 
+```{r make-table, echo = FALSE}
+# Comment here
+meanmass_8 <- melted_obj %>%
+  group_by(host_phenotype_s, host_sex_s) %>%
+  summarize(mean_bodymass = mean(host_tot_mass_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 8)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanmass_8 %>%
+  kable()
+```
+
+**Table 1**: Mean body mass among phenotypes and sexes. 
+
+```{r}
+meanmass_8 %>%
+  ggplot(aes(x = host_sex_s,
+             y = mean_bodymass,
+             fill = host_phenotype_s)) +
+    geom_col(position = "dodge")
+```
+
+**Figure 6**: Using the table, the mean body mass visualized. 
+
 ```{r density-sex-lowermass-phylum}
 # Comment here
 melted_obj %>%
@@ -157,7 +183,7 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   xlim(2500, 5000)
 ```
 
-**Figure 6**: A density plot of the lower range weight class of females and males and the correlating Phylums.
+**Figure 7**: A density plot of the lower range weight class of females and males and the correlating Phylums.
 
 ```{r density-sex-uppermass-pylum}
 # Comment here
@@ -167,7 +193,7 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   xlim(5500, 7000)
 ```
 
-**Figure 7**: A density plot of the upper range weight class of females and males and the correlating Phylums.
+**Figure 8**: A density plot of the upper range weight class of females and males and the correlating Phylums.
 
 In addition to a minimum of 5-10 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion. 2-3 pages.
 
