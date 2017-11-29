@@ -93,7 +93,7 @@ load("output/phyloseqobject.RData")
 melted_obj <- psmelt(phyloseq_obj)
 ```
 
-```{r}
+```{r gridplot-sex-abundance-phenotype}
 # COMMENT HERE
 ggplot(data=melted_obj, 
           aes(x=host_sex_s, y=Abundance)) +
@@ -103,8 +103,8 @@ ggplot(data=melted_obj,
 
 **Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss.
 
-```{r}
-# Bar plot code with a grid, can analyze sample by sample!
+```{r gridplot-abundance-sex-phylum}
+# Comment here
 ggplot(data=melted_obj, 
           aes(x=host_sex_s, y=Abundance)) +
   geom_point() +
@@ -113,10 +113,8 @@ ggplot(data=melted_obj,
 
 **Figure 2**: A grid plot of the abundance of certain phylums in both males and females.
 
-```{r make-barplot-of-smokingstatus, echo = FALSE}
-# this code uses the same data as above, but use it to make a
-# barplot - remember geom_col() is just like
-# when you use geom_bar(stat = "identity")
+```{r baplot-phenotype-sex-age, echo = FALSE}
+# Comment here
 melted_obj %>%
   ggplot(aes(x = host_phenotype_s,
              y = host_age_s,
@@ -126,10 +124,8 @@ melted_obj %>%
 
 **Figure 3**: A bar plot indicating different ages between the categories intact, neutered, obese, and obese after weight loss among females and males.
 
-```{r make-barplot-of-smokingstatus, echo = FALSE}
-# this code uses the same data as above, but use it to make a
-# barplot - remember geom_col() is just like
-# when you use geom_bar(stat = "identity")
+```{r barplot-age-phenotype-phylum, echo = FALSE}
+# Comment here
 melted_obj %>%
   ggplot(aes(x = host_phenotype_s,
              y = host_age_s,
@@ -139,7 +135,8 @@ melted_obj %>%
 
 **Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
 
-```{r}
+```{r density-mass-phenotype}
+# Comment here
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s)) +
   geom_density(alpha = 0.1) +
@@ -148,7 +145,8 @@ ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s))
 
 **Figure 5**: A density plot of host's total mass to its phenotype. 
 
-```{r}
+```{r density-sex-lowermass-phylum}
+# Comment here
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
@@ -157,7 +155,8 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
 
 **Figure 6**: A density plot of the lower range weight class of females and males and the correlating Phylums.
 
-```{r}
+```{r density-sex-uppermass-pylum}
+# Comment here
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
