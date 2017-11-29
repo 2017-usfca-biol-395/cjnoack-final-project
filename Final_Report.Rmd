@@ -114,6 +114,8 @@ melted_obj %>%
     geom_col(position = "dodge")
 ```
 
+**Figure 3**: A bar plot indicating different ages between the categories intact, neutered, obese, and obese after weight loss among females and males.
+
 ```{r make-barplot-of-smokingstatus, echo = FALSE}
 # this code uses the same data as above, but use it to make a
 # barplot - remember geom_col() is just like
@@ -124,6 +126,17 @@ melted_obj %>%
              fill = Phylum)) +
     geom_col(position = "dodge")
 ```
+
+**Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
+
+```{r}
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s)) +
+  geom_density(alpha = 0.1) +
+  xlim(3400, 7000)
+```
+
+**Figure 5**: A density plot of host's total mass to its phenotype. 
 
 In addition to a minimum of 5-10 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion. 2-3 pages.
 
