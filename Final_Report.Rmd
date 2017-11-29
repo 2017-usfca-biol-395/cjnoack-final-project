@@ -13,8 +13,6 @@ csl: bioinformatics.csl
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
 # Introduction
 
 Add about 2-3 pages here. Across the whole manuscript, you should cite at least 20 peer reviewed articles.
@@ -77,7 +75,7 @@ devtools::install_github("ropenscilabs/gramr")
 ```
 
 ```{r}
-load ("output/phyloseqobject.RData")
+load("output/phyloseqobject.RData")
 ```
 
 ```{r meltedtable, echo=FALSE}
@@ -93,7 +91,7 @@ ggplot(data=melted_obj,
   facet_grid(. ~ host_phenotype_s)
 ```
 
-**Figure 1:** 
+**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss.
 
 ```{r}
 # Bar plot code with a grid, can analyze sample by sample!
@@ -102,6 +100,8 @@ ggplot(data=melted_obj,
   geom_point() +
   facet_grid(. ~ Phylum)
 ```
+
+**Figure 2**: A grid plot of the abundance of certain phylums in both males and females.
 
 ```{r make-barplot-of-smokingstatus, echo = FALSE}
 # this code uses the same data as above, but use it to make a
