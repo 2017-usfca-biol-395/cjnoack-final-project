@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
+
 REFERENCE: 2-3 pages will be 1000-1500
 
 - Domestication of cats
@@ -27,9 +28,12 @@ Add about 2-3 pages here. Across the whole manuscript, you should cite at least 
 # Methods
 
 ## Study design
-REFERENCE: 250 words = 1/2 page
 
-Add about half a page here. In this section instead of first person (I/we), use the authors of the paper you selected, since you'll just be describing what they did, based on the methods in their paper.
+Fischer et al. used twenty-four cats from the University of California, Davis with a median age of 6.4 years. All cats were pathogen free domestic shorthairs. From the twenty-four cats, eight of the cats were obese with four males and four females. Eight cats were lean and not neutered, again with four males and four females. Eight cats, six males and two females, were lean and neutered [@fischer2017effects]. All twenty-four cats had the same diet before and during the study. Every cat underwent a physical and blood sample before the experiment began.
+
+Cats which were lean and both neutered or not neutered housed together. All had the same diet *but* their intake was not measured. The night before the fecal sampling, the cats slept alone. Fischer et al. performed BCS (body composition scores) for each cat before sampling. 
+
+The obese, neutered cats underwent castration/spaying 1-6 years before the study [@fischer2017effects]. Unlike the lean cats, the obese cats slept alone. The obese neutered ate the normal diet given to all cats for ten days. For six weeks, they ate 60-70% of the prior intake. Again, unlike the lean cats, their intake was now measured. Fischer et al. recorded the cats' weights every week. They also recorded fecal samples before and after the dietary restriction began [@fischer2017effects].
 
 ## Sample origin and sequencing
 REFERENCE: 250 words = 1/2 page
