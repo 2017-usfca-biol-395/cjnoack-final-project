@@ -58,7 +58,8 @@ Now, the data given is fully processed. Before analysis, I created a metadata ta
 
 # Results
 
-INTRODUCTION.
+The data proved to be interesting and not perfectly correlated to my hypothesis. I began my analysis using a grid plot in figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass. 
+
 
 ## Subsections are ok in the results section too
 
@@ -110,14 +111,24 @@ melted_obj <- psmelt(phyloseq_obj)
 ```
 
 ```{r gridplot-sex-abundance-phenotype}
-# COMMENT HERE
+# First figure indicating the general schema of the data
 ggplot(data=melted_obj, 
           aes(x=host_sex_s, y=Abundance)) +
   geom_point() +
   facet_grid(. ~ host_phenotype_s)
 ```
 
-**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss. Males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. 
+**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss. 
+
+```{r density-mass-phenotype}
+# Second figure using density to show the range of body mass to phenotype
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s)) +
+  geom_density(alpha = 0.1) +
+  xlim(3400, 7000)
+```
+
+**Figure 2**: A density plot of host's total mass to its phenotype. 
 
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
@@ -150,16 +161,6 @@ melted_obj %>%
 ```
 
 **Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
-
-```{r density-mass-phenotype}
-# Comment here
-melted_obj %>%
-ggplot(aes(host_tot_mass_s, fill = host_phenotype_s, colour = host_phenotype_s)) +
-  geom_density(alpha = 0.1) +
-  xlim(3400, 7000)
-```
-
-**Figure 5**: A density plot of host's total mass to its phenotype. 
 
 ```{r make-table, echo = FALSE}
 # Comment here
