@@ -117,7 +117,7 @@ ggplot(data=melted_obj,
   facet_grid(. ~ host_phenotype_s)
 ```
 
-**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss.
+**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss. Males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. 
 
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
