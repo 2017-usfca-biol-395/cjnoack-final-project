@@ -60,12 +60,13 @@ Now, the data given is fully processed. Before analysis, I created a metadata ta
 
 The data proved to be interesting and not perfectly correlated to my hypothesis. I began my analysis using a grid plot in figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass.
 
+**The role of body mass**
+
 After analyzing the abundance of different phenotypes by sex and the distribution of body masses, I wanted to look deeper into the body mass question. What were the mean body masses among the four phenotypes for both male and female cats? In Table 1, the phenotype with the highest mean body mass are the obese undergoing weight loss female cats, followed by obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the intact male cats, followed by intact females. The medians of body mass are obese male cats and neutered female cats. Given the information in Table 1, I wanted to see it visually. Figure 3 depicts Table 1, and in it we see that the difference between females and males in terms of body mass to phenotype is not very significant. The most difference is between intact females and males. The obese cats undergoing weight loss are nearly similar between males and females. We see the general trend of increased body mass and phenotype along both sexes with males being generally larger. 
 
+**The role of microbial communities**
 
-
-
-## Subsections are ok in the results section too
+Next, I wanted to see which microbial communities were playing a role, if at all. Thus, I made a density plot indicating the abundance of certain microbial communities in different phenotypes and sexes. Figure 4 indicates the lower range of body masses from the data, while Figure 5 shows the upper range. I divided these graphs for better visualization of the data as there were many data points to take into account. In Figure 4, we see that female cats dominate the lower weight range class among all phenotypes, showing a fairly normal distribution. Firmicutes shows the highest abundance in the lower weight ranges of both males and females. In Figure 5, males dominate the upper body weight range with uneven peaks, while females have a moderate range with only two dominant peaks. Firmicutes, again, have the highest density of both males and females. Visibly, Bacteriodetes also have a high density between the two sexes. Proteobacteria and Fusobacteria have intense fluctuations between sex and body mass. 
 
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
@@ -168,6 +169,30 @@ meanmass_8 %>%
 
 **Figure 3**: Using the table, the mean body mass visualized with a bar graph. 
 
+```{r density-sex-lowermass-phylum}
+# Comment here
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
+  geom_density(alpha = 0.1) +
+  xlim(2500, 5000) +
+  ggtitle("Lower distribution of body mass across bacterial phyla and cat sex") +
+  xlab("Cat total mass") + ylab("Density") + labs(fill = "Cat sex", colour = "Bacteria phylum")
+```
+
+**Figure 4**: A density plot of the lower range weight class of females and males and the correlating Phylums. 
+
+```{r density-sex-uppermass-pylum}
+# Comment here
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
+  geom_density(alpha = 0.1) +
+  xlim(5500, 7000) +
+    ggtitle("Upper distribution of body mass across bacterial phyla and cat sex") +
+  xlab("Cat total mass") + ylab("Density") + labs(fill = "Cat sex", colour = "Bacteria phylum")
+```
+
+**Figure 5**: A density plot of the upper range weight class of females and males and the correlating Phylums. 
+
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
 ggplot(data=melted_obj, 
@@ -199,26 +224,6 @@ melted_obj %>%
 ```
 
 **Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
-
-```{r density-sex-lowermass-phylum}
-# Comment here
-melted_obj %>%
-ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
-  geom_density(alpha = 0.1) +
-  xlim(2500, 5000)
-```
-
-**Figure 7**: A density plot of the lower range weight class of females and males and the correlating Phylums.
-
-```{r density-sex-uppermass-pylum}
-# Comment here
-melted_obj %>%
-ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
-  geom_density(alpha = 0.1) +
-  xlim(5500, 7000)
-```
-
-**Figure 8**: A density plot of the upper range weight class of females and males and the correlating Phylums.
 
 CONCLUSION
 
