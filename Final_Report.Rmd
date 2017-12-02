@@ -116,6 +116,7 @@ devtools::install_github("ropenscilabs/gramr")
 ```{r}
 load("output/phyloseqobject.RData")
 ```
+
 ```{r meltedtable, echo=FALSE}
 # Compile into a table
 melted_obj <- psmelt(phyloseq_obj)
