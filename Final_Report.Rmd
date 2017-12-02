@@ -70,6 +70,10 @@ Next, I wanted to see which microbial communities were playing a role, if at all
 
 The microbial community question continued to linger, so I dug further. In Figure 6, I used a grid plot instead for better visualization of my question. We see a new phylum option as 'not applicable' having the highest abundance of female and male cats. After, Firmicutes, Bacteriodetes, and Actinobacteria. The lowest abundance is Fusobacteria, Proteobacteria, and Tenericutes.
 
+**The role of age**
+
+
+
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
 # They can be installed either with the intall.packages() function
@@ -205,29 +209,63 @@ ggplot(data=melted_obj,
        x = "Sex of Cat")
 ```
 
-**Figure 6**: A grid plot of the abundance of certain phylums in both males and females. 
+**Figure 6**: A grid plot of the abundance of bacterial phylums in both males and females. 
+
+```{r make-table, echo = FALSE}
+# Comment here
+meanage_10 <- melted_obj %>%
+  group_by(host_phenotype_s, host_sex_s) %>%
+  summarize(mean_age = mean(host_age_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 10)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanage_10 %>%
+  kable()
+```
+
+**Table 2**: A table of the mean ages for each phenotype in male and female cats. 
 
 ```{r baplot-phenotype-sex-age, echo = FALSE}
 # Comment here
-melted_obj %>%
+meanage_10 %>%
   ggplot(aes(x = host_phenotype_s,
-             y = host_age_s,
+             y = mean_age,
              fill = host_sex_s)) +
-    geom_col(position = "dodge")
+    geom_col(position = "dodge") +
+  labs(title = "Male and female phenotypes measured to age",
+       x = "Cat Phenotype",
+       y = "Cat Age",
+       fill = "Cat Sex")
 ```
 
-**Figure 3**: A bar plot indicating different ages between the categories intact, neutered, obese, and obese after weight loss among females and males.
+**Figure 7**: A bar plot indicating different ages between the categories intact, neutered, obese, and obese after weight loss among females and males. We see females in all phenotypes have the largest range of age groups while males dominate the medium to young age groups. The intact and obese undergoing weight loss have similar patterns for males and females. The neutered and obese phenotypes show the strongest variance between the sexes. 
+
+```{r make-table, echo = FALSE}
+# Comment here
+meanaps_30 <- melted_obj %>%
+  group_by(host_phenotype_s, Phylum, host_sex_s) %>%
+  summarize(mean_agephylumsex = mean(host_age_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 50)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanaps_30 %>%
+  kable()
+```
 
 ```{r barplot-age-phenotype-phylum, echo = FALSE}
 # Comment here
-melted_obj %>%
+meanaps_30 %>%
   ggplot(aes(x = host_phenotype_s,
-             y = host_age_s,
+             y = mean_agephylumsex,
              fill = Phylum)) +
     geom_col(position = "dodge")
 ```
 
-**Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
+**Figure 8**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
 
 CONCLUSION
 
