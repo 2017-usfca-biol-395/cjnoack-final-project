@@ -60,7 +60,9 @@ Now, the data given is fully processed. Before analysis, I created a metadata ta
 
 The data proved to be interesting and not perfectly correlated to my hypothesis. I began my analysis using a grid plot in figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass.
 
-After analyzing the abundance of different phenotypes by sex and the distribution of body masses, I wanted to look deeper into the body mass question. What were the mean body masses among the four phenotypes for both male and female cats? In Table 1, the phenotype with the highest mean body mass are the obese undergoing weight loss female cats, followed by obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the intact male cats, followed by intact females. The medians of body mass are obese male cats and neutered female cats.  
+After analyzing the abundance of different phenotypes by sex and the distribution of body masses, I wanted to look deeper into the body mass question. What were the mean body masses among the four phenotypes for both male and female cats? In Table 1, the phenotype with the highest mean body mass are the obese undergoing weight loss female cats, followed by obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the intact male cats, followed by intact females. The medians of body mass are obese male cats and neutered female cats. Given the information in Table 1, I wanted to see it visually. Figure 3 depicts Table 1, and in it we see that the difference between females and males in terms of body mass to phenotype is not very significant. The most difference is between intact females and males. The obese cats undergoing weight loss are nearly similar between males and females. We see the general trend of increased body mass and phenotype along both sexes with males being generally larger. 
+
+
 
 
 ## Subsections are ok in the results section too
@@ -118,8 +120,7 @@ ggplot(data=melted_obj,
           aes(x=host_sex_s, y=Abundance)) +
   geom_point() +
   facet_grid(. ~ host_phenotype_s) +
-  labs(title = "Grid plot",
-       subtitle = "Abundance of male and female cats with different phenotypes",
+  labs(title = "Abundance of male and female cats with different phenotypes",
        x = "Sex of Cat")
 ```
 
@@ -131,8 +132,7 @@ melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
   geom_density(alpha = 0.1) +
   xlim(3400, 7000) +
-  labs(title = "Density plot", 
-       subtitle = "Distribution of body size in different phenotypes", 
+  labs(title = "Distribution of body size in different phenotypes",
        x = "Total Mass of Cats", 
        y = "Density", 
        fill = "Cat Phenotype")
@@ -155,6 +155,18 @@ meanmass_8 %>%
 ```
 
 **Table 1**: Mean body mass among phenotypes and sexes. 
+
+```{r}
+meanmass_8 %>%
+  ggplot(aes(x = host_sex_s,
+             y = mean_bodymass,
+             fill = host_phenotype_s)) +
+    geom_col(position = "dodge") +
+  ggtitle("Cat sex to mean body mass over four phenotypes") +
+  xlab("Cat Sex") + ylab("Mean Body Mass") + labs(fill = "Cat Phenotype")
+```
+
+**Figure 3**: Using the table, the mean body mass visualized with a bar graph. 
 
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
@@ -187,16 +199,6 @@ melted_obj %>%
 ```
 
 **Figure 4**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
-
-```{r}
-meanmass_8 %>%
-  ggplot(aes(x = host_sex_s,
-             y = mean_bodymass,
-             fill = host_phenotype_s)) +
-    geom_col(position = "dodge")
-```
-
-**Figure 6**: Using the table, the mean body mass visualized. 
 
 ```{r density-sex-lowermass-phylum}
 # Comment here
