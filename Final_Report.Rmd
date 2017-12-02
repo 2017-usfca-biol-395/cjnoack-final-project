@@ -72,7 +72,7 @@ The microbial community question continued to linger, so I dug further. In Figur
 
 **The role of age**
 
-Lastly, I wanted to see if age played a role between the sexes when it came to remaining obese. In Figure 7, we use the data from Table 2 to see the mean ages across the phenotypes. In Table 2, we see the neutered females, and obese (with or without weight loss) females are the oldest. The neutered males, intact males, and obese males are the youngest. In Figure 7, we see females in all phenotypes have the larger mean age groups while males dominate the younger age groups. The intact cats have similar mean age patterns between males and females. The neutered, obese, and obese undergoing weight loss phenotypes show the strongest variance between the sexes. 
+Lastly, I wanted to see if age played a role between the sexes when it came to remaining obese. In Figure 7, we use the data from Table 2 to see the mean ages across the phenotypes. In Table 2, we see the neutered females, and obese (with or without weight loss) females are the oldest. The neutered males, intact males, and obese males are the youngest. In Figure 7, we see females in all phenotypes have the larger mean age groups while males dominate the younger age groups. The intact cats have similar mean age patterns between males and females. The neutered, obese, and obese undergoing weight loss phenotypes show the strongest variance between the sexes. Next, I wanted to find out the mean sex across the bacteria phylas and cat phenotypes for females and males. This would be a far more hefty task. In Table 3, we see that females are still, on average, older. Intact phenotypes have considerably less bacteria phyla indicated here than the other phenotypes. Females on average are still older than males. I wanted to visualize the data in the best way possible, so a bar graph seemed like an effective solution. In Figure 8, we see the intact phenotype has three fewer bacterial phyla than the other phenotypes. Neutered phenotypes have older ages, on average. Obese and obese undergoing weight loss typically have similar ages as well as bacterial phylas. 
 
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
@@ -257,7 +257,7 @@ meanaps_30 %>%
   kable()
 ```
 
-**Table 3**: 
+**Table 3**: A table indicating mean ages for the different cat phenotypes, bacteria phylas, and sex. 
 
 ```{r barplot-age-phenotype-phylum, echo = FALSE}
 # Comment here
@@ -265,10 +265,14 @@ meanaps_30 %>%
   ggplot(aes(x = host_phenotype_s,
              y = mean_agephylumsex,
              fill = Phylum)) +
-    geom_col(position = "dodge")
+    geom_col(position = "dodge") +
+    labs(title = "Phenotypes and bacterial phyla measured to mean age",
+       x = "Cat Phenotype",
+       y = "Cat Age",
+       fill = "Phylum")
 ```
 
-**Figure 8**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss.
+**Figure 8**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss. 
 
 CONCLUSION
 
