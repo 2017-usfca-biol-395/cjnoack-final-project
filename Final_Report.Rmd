@@ -72,7 +72,7 @@ The microbial community question continued to linger, so I dug further. In Figur
 
 **The role of age**
 
-
+Lastly, I wanted to see if age played a role between the sexes when it came to remaining obese. In Figure 7, we use the data from Table 2 to see the mean ages across the phenotypes. In Table 2, we see the neutered females, and obese (with or without weight loss) females are the oldest. The neutered males, intact males, and obese males are the youngest. In Figure 7, we see females in all phenotypes have the larger mean age groups while males dominate the younger age groups. The intact cats have similar mean age patterns between males and females. The neutered, obese, and obese undergoing weight loss phenotypes show the strongest variance between the sexes. 
 
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
@@ -234,13 +234,13 @@ meanage_10 %>%
              y = mean_age,
              fill = host_sex_s)) +
     geom_col(position = "dodge") +
-  labs(title = "Male and female phenotypes measured to age",
+  labs(title = "Male and female phenotypes measured to mean age",
        x = "Cat Phenotype",
        y = "Cat Age",
        fill = "Cat Sex")
 ```
 
-**Figure 7**: A bar plot indicating different ages between the categories intact, neutered, obese, and obese after weight loss among females and males. We see females in all phenotypes have the largest range of age groups while males dominate the medium to young age groups. The intact and obese undergoing weight loss have similar patterns for males and females. The neutered and obese phenotypes show the strongest variance between the sexes. 
+**Figure 7**: A bar plot indicating different mean ages between the categories intact, neutered, obese, and obese after weight loss among females and males. 
 
 ```{r make-table, echo = FALSE}
 # Comment here
@@ -255,6 +255,8 @@ meanaps_30 <- melted_obj %>%
 meanaps_30 %>%
   kable()
 ```
+
+**Table 3**: 
 
 ```{r barplot-age-phenotype-phylum, echo = FALSE}
 # Comment here
