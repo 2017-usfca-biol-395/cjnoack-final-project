@@ -68,6 +68,8 @@ After analyzing the abundance of different phenotypes by sex and the distributio
 
 Next, I wanted to see which microbial communities were playing a role, if at all. Thus, I made a density plot indicating the abundance of certain microbial communities in different phenotypes and sexes. Figure 4 indicates the lower range of body masses from the data, while Figure 5 shows the upper range. I divided these graphs for better visualization of the data as there were many data points to take into account. In Figure 4, we see that female cats dominate the lower weight range class among all phenotypes, showing a fairly normal distribution. Firmicutes shows the highest abundance in the lower weight ranges of both males and females. In Figure 5, males dominate the upper body weight range with uneven peaks, while females have a moderate range with only two dominant peaks. Firmicutes, again, have the highest density of both males and females. Visibly, Bacteriodetes also have a high density between the two sexes. Proteobacteria and Fusobacteria have intense fluctuations between sex and body mass. 
 
+The microbial community question continued to linger, so I dug further. In Figure 6, I used a grid plot instead for better visualization of my question. We see a new phylum option as 'not applicable' having the highest abundance of female and male cats. After, Firmicutes, Bacteriodetes, and Actinobacteria. The lowest abundance is Fusobacteria, Proteobacteria, and Tenericutes.
+
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
 # They can be installed either with the intall.packages() function
@@ -198,10 +200,12 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
 ggplot(data=melted_obj, 
           aes(x=host_sex_s, y=Abundance)) +
   geom_point() +
-  facet_grid(. ~ Phylum)
+  facet_grid(. ~ Phylum) +
+  labs(title = "Abundance of male and female cats to bacterial phylum",
+       x = "Sex of Cat")
 ```
 
-**Figure 2**: A grid plot of the abundance of certain phylums in both males and females.
+**Figure 6**: A grid plot of the abundance of certain phylums in both males and females. 
 
 ```{r baplot-phenotype-sex-age, echo = FALSE}
 # Comment here
