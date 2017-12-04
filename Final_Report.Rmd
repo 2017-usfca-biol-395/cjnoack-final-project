@@ -125,8 +125,8 @@ melted_obj <- psmelt(phyloseq_obj)
 
 ```{r gridplot-sex-abundance-phenotype}
 # First figure indicating the general schema of the data
-ggplot(data=melted_obj, 
-          aes(x=host_sex_s, y=Abundance)) +
+ggplot(data = melted_obj,
+          aes(x = host_sex_s, y = Abundance)) +
   geom_point() +
   facet_grid(. ~ host_phenotype_s) +
   labs(title = "Abundance of male and female cats with different phenotypes",
@@ -142,8 +142,8 @@ ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
   geom_density(alpha = 0.1) +
   xlim(3400, 7000) +
   labs(title = "Distribution of body size in different phenotypes",
-       x = "Total Mass of Cats", 
-       y = "Density", 
+       x = "Total Mass of Cats",
+       y = "Density",
        fill = "Cat Phenotype")
 ```
 
@@ -183,7 +183,7 @@ melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
   xlim(2500, 5000) +
-  ggtitle("Lower distribution of body mass across bacterial phyla and cat sex") +
+  ggtitle("Lower range body mass to bacterial phyla and cat sex") +
   xlab("Cat total mass") + ylab("Density") + labs(fill = "Cat sex", colour = "Bacteria phylum")
 ```
 
@@ -195,16 +195,18 @@ melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
   xlim(5500, 7000) +
-    ggtitle("Upper distribution of body mass across bacterial phyla and cat sex") +
-  xlab("Cat total mass") + ylab("Density") + labs(fill = "Cat sex", colour = "Bacteria phylum")
+    ggtitle("Upper range body mass to bacterial phyla and cat sex") +
+  xlab("Cat total mass") +
+  ylab("Density") +
+  labs(fill = "Cat sex", colour = "Bacteria phylum")
 ```
 
 **Figure 5**: A density plot of the upper range weight class of females and males and the correlating Phylums. 
 
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
-ggplot(data=melted_obj, 
-          aes(x=host_sex_s, y=Abundance)) +
+ggplot(data = melted_obj, 
+          aes(x = host_sex_s, y = Abundance)) +
   geom_point() +
   facet_grid(. ~ Phylum) +
   labs(title = "Abundance of male and female cats to bacterial phylum",
