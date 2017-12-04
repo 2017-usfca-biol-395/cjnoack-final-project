@@ -1,13 +1,13 @@
-# R Script 
+# RScript
 # Chelsea Noack
 # November 17, 2017
 # cnoackj@gmail.com
 
-# Files go into process_reads_R: via DADA2 and save into phyloseq_obj, my phyloseq.RData into 
-# report.Rmd: load phyloseq.
+# Files go into process_reads_R:
+# via DADA2 and save into phyloseq_obj,
+# my phyloseq.RData into report.Rmd: load phyloseq
 
-# Based on report #1.
-
+# Based on report #1
 
 # NOTE: Much of the following follows the DADA2 tutorials available here:
 # https://benjjneb.github.io/dada2/tutorial.html
@@ -25,10 +25,8 @@ sample_names <- sapply(strsplit(filenames_forward_reads, "\\."), `[`, 1)
 # Specify the full path to each of the filenames_forward_reads
 filenames_forward_reads <- file.path(path, filenames_forward_reads)
 
-
 # Plots the quality profiles of all thirty-one samples
 plotQualityProfile(filenames_forward_reads[1:31])
-
 
 # Place filtered files in filtered/ subdirectory
 # note this will fail if the directory doesn't exist
@@ -42,8 +40,8 @@ filtered_reads_path <- file.path(filter_path,
 # https://benjjneb.github.io/dada2/
 #     faq.html#can-i-use-dada2-with-my-454-or-ion-torrent-data
 filtered_output <- filterAndTrim(fwd = filenames_forward_reads,
-                                 filt = filtered_reads_path, 
-                                 minLen = 55, 
+                                 filt = filtered_reads_path,
+                                 minLen = 55,
                                  maxLen = 600,
                                  maxN = 0, # discard any seqs with Ns
                                  maxEE = 3, # allow w/ up to 3 expected errors
@@ -51,7 +49,6 @@ filtered_output <- filterAndTrim(fwd = filenames_forward_reads,
                                  rm.phix = TRUE,
                                  compress = TRUE,
                                  multithread = TRUE)
-
 
 # produce nicely-formatted markdown table of read counts
 # before/after trimming
@@ -86,7 +83,7 @@ dada_forward_reads <- dada(dereplicated_forward_reads,
                            err = errors_forward_reads,
                            HOMOPOLYMER_GAP_PENALTY = -1, # reduce penalty bc 454
                            BAND_SIZE = 32,
-                           multithread = TRUE) # performs local alignments bc indels
+                           multithread = TRUE)
 
 # check dada results
 dada_forward_reads
@@ -134,8 +131,9 @@ rownames(track) <- sample_names
 kable(track)
 
 
-# assigns taxonomy to each sequence variant based on a supplied training set
-# made up of known sequences
+# assigns taxonomy to each sequence variant
+# based on a supplied training set made up
+# of known sequences
 taxa <- assignTaxonomy(sequence_table_nochim,
                        "data/training/silva_nr_v128_train_set.fa.gz",
                        multithread = TRUE,
@@ -184,17 +182,12 @@ metadata_in <- read.table(paste0("data/metadata/",
                           stringsAsFactors = FALSE,
                           row.names = 7) # sets sample IDs to row names
 
-# read in the phylogeny, which was created from the fasta exported above
-# in Geneious by aligning the sequences with MAFFT and then building a
-# Maximum-Likelihood tree with RAxML
-# tree_in <- read_tree("output/sequence_variants_MAFFT_RAxML.newick")
 
 # Construct phyloseq object (straightforward from dada2 outputs)
 phyloseq_obj <- phyloseq(otu_table(sequence_table_nochim,
                                    taxa_are_rows = FALSE), # sample-spp matrix
                          sample_data(metadata_in), # metadata for each sample
-                         tax_table(taxa)) #, # taxonomy for each sequence variant
-#phy_tree(tree_in)) # phylogeny from sequence variants
+                         tax_table(taxa)) #taxonomy for each sequence variant
 
 
 save(phyloseq_obj, file = "output/phyloseqobject.RData")
