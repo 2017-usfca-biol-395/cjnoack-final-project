@@ -14,17 +14,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Introduction
-
 REFERENCE: 2-3 pages will be 1000-1500
 
-- Domestication of cats
-- Our love for cats
-- Being obese, as well as for humans, will cause early death, include statistics
-- **HYPOTHESIS**: Females will be larger overall, especially after neutering, than male cats. This puts female cats at a severe disadavntage. 
-- What if it's not just diet? Does neutering play a role? Population control is important too. Here I ask if there are particular bacterias within striclty obese, neutered cats that is preventing them from maintaining a healthy weight? If so, can this lead to a positive medication which can be administered to the cats?
-- In the study by so and so, they studied intact and neutered cats in order to find a connection between obesity and being neutered.
+The glorification of fat cats, cats which are overweight or obese, is an attraction rather than a concern in our culture. For what we often mistake as chubby cuteness is a danger to our furry friends. Cats whom are obese are at risk for diabetes type 2, lameness, oral cavity disease, urinary tract disease, neoplasia, and more [@takosova2016feline]. In addition, we find that obesity is one of the most predominant nutritional disorders within cats, staggeringly "between 11.5% and 63% [of] cats [being] overweight or obese" [@tarkosova2016feline]. The causes of obesity are, unfortunately, difficult to pinpoint. Diet is a factor, as well as genetics, environment, and overall physiologies. But is neutering a cause? Previous studies indicate that neutering may also play a factor into the weight gain of cats [@kanchuk2003weight], however the reason as to *why* reamins unclear. 
 
-Add about 2-3 pages here. Across the whole manuscript, you should cite at least 20 peer reviewed articles.
+Neutering itself is proven to be important for cat population control. 
+
+I use data from the study titled *Effects of obesity, energy restriction and neutering on the faecal microbiota of cats* by Manuela M. Fischer, et al. in order to better understand the implications behind neutering and cat weight. I specify a particular interest in sex and hypothesize that female cats will tend to be larger than male cats, especially when neutered. This is due to the differing sex hormone path which, in effect, alters the gut microbiota. To further support my analysis, I observe correlations between weight gain and sex to abundances of bacterial phylas from feline fecal samples and the age of the cats.
+
+A study done by Kanchuk et al. suggests that "A stair-step increase in energy intake, and not decreased energy expenditure, appears to drive the weight gain associated with gonadectomy" [@kanchuk2003weight].
+
+This study is important because humans share microbiomes with their furry friends. [@song2013cohabiting]
 
 # Methods
 
@@ -58,7 +58,7 @@ Now, the data given is fully processed. Before analysis, I created a metadata ta
 
 # Results
 
-The data proved to be interesting and not perfectly correlated to my hypothesis. I began my analysis using a grid plot in figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass.
+I began my analysis using a grid plot in figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass.
 
 **The role of body mass**
 
@@ -274,16 +274,34 @@ meanaps_30 %>%
 
 **Figure 8**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss. 
 
-CONCLUSION
-
 # Discussion
 
-My hypothesis was that female cats would be more obese than male cats, especially after being neutered. However, the data indicates opposite results. It appears that there is no causation between getting neutered/spayed and weight gain. However, there appears to be a small, if not subtle, difference between male and female cats. Of course, this is heavily dependent on the bias of the previous experiment. 
+My hypothesis was that female cats would be more obese than male cats, especially after being neutered. However, the data indicates opposite results. Male cats are heavier than female cats within all phenotypes; intact, neutered, obese, and obese undergoing weight loss. We see more males who are neutered due to sample design. 
 
-The dog jumped over the log 
+**The role of body mass**
+
+Female obese cats (undergoing and not undergoing weight loss) were *not* heavier than the male cats. In table 1, we see that within every phenotype the male cats are more obese than the female cats. Within the obese phenotype, the males and females were fairly similar. But we see that even after the weight loss treatment, males are significantly larger than the females and actually retain almost the same average as the obese cats. Intact female cats are lighter than neutered. The same goes for the males. Intact males are lighter than neutered males. So, there appears to be a pattern, but we cannot say this is always the case. It only pertains to this study. Additionally, obese females and males were nearly the same weight range, but males had a harder time losing weight. Why? Perhaps the biochemical pathways or lipid retention is different in males than in females.The lowest weight was 3.7 kg female intact cat. The highest weight was an obese 6.7 kg male cat. We see that, again, males are heavier than females, which counters my hypothesis. "Feline obesity is associated with a significant increase in FT4 (free serum throxine) within the normal range" [@ferguson2007obesity]. 
+
+**The role of microbial communities**
+
+Firmicutes made an appearance across the lower body mass range and upper body mass range. Admittedly, the mammalian GI tract is highly diverse [@suchodolski2011intestinal], thus looking for a single community of bacteria possibly affiliated with obesity and neutering is similar to finding a needle in a haystack. Firmicutes did appear most frequently within all body mass sizes, which indicates to me that the bacteria is *not* dependent on a weight or neutering factor, or atleast is not explicity correlated. The overabundance of Firmicutes and Bacteriodetes is consistent with previous studies about feline fecal microbial communities [@ritchie2010characterization]. 
+
+What perhaps is more proactive is not looking at the bacteria phyla which appeared in both males, females, and phenotypes, but observing the ones which only occured in a few. In 
+
+**The role of age**
+
+Age has been shown to alter the microbiota community within humans [@mariat2009firmicutes]. Is that the same for felines? If so, would it also be affected by neutering and weight gain/maintenance? These were all questions I had as I approached the final aspect of my analysis. 
+
+Typically, felines undergo neutering early in life [@deusch2015longitudinal]. In a study done by Deusch et al., they wanted to identify the connection between We conclude that the feline faecal microbiome is predominantly determined by age when diet and environment are controlled for. 
+
+**Alternative Conclusions**
+
+If sex does not factor into the weight gain or loss in cats, what else could? Underlying my hypothesis was the presumption that the male and female hormones were explicit. However, it might be the hormones working in tandem with other pathways. In a study done by Hoenig et al., they found that "changes in NEFA suppression, caloric intake, and leptin concentrations may be indicators of, and possible risk factors for, the development of obesity in cats after neutering" [@hoenig2002effects]. 
+
+**Future Directions**
 
 REFERENCE: 1500-2000 words
 
-Add around 3-4 pages interpreting your results and considering future directions one might take in analyzing these data.
+
 
 # Sources Cited
