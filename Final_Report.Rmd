@@ -184,7 +184,9 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
   xlim(2500, 5000) +
   ggtitle("Lower range body mass to bacterial phyla and cat sex") +
-  xlab("Cat total mass") + ylab("Density") + labs(fill = "Cat sex", colour = "Bacteria phylum")
+  xlab("Cat total mass") +
+  ylab("Density") +
+  labs(fill = "Cat sex", colour = "Bacteria phylum")
 ```
 
 **Figure 4**: A density plot of the lower range weight class of females and males and the correlating Phylums. 
@@ -205,7 +207,7 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
 
 ```{r gridplot-abundance-sex-phylum}
 # Comment here
-ggplot(data = melted_obj, 
+ggplot(data = melted_obj,
           aes(x = host_sex_s, y = Abundance)) +
   geom_point() +
   facet_grid(. ~ Phylum) +
