@@ -1,7 +1,7 @@
 ---
 title: "Final Report: The Effects of Neutering on Female and Male Adult Cats"
 author: "Chelsea Noack"
-date: "November 29, 2017"
+date: "December 4, 2017"
 output:
     github_document: default
     word_document: default
@@ -149,7 +149,7 @@ ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
 
 **Figure 2**: A density plot of host's total mass to its phenotype. 
 
-```{r make-table-1, echo = FALSE}
+```{r tableone, echo = FALSE}
 # Comment here
 meanmass_8 <- melted_obj %>%
   group_by(host_phenotype_s, host_sex_s) %>%
@@ -213,7 +213,7 @@ ggplot(data=melted_obj,
 
 **Figure 6**: A grid plot of the abundance of bacterial phylums in both males and females. 
 
-```{r make-table-2, echo = FALSE}
+```{r table2, echo = FALSE}
 # Comment here
 meanage_10 <- melted_obj %>%
   group_by(host_phenotype_s, host_sex_s) %>%
@@ -244,7 +244,7 @@ meanage_10 %>%
 
 **Figure 7**: A bar plot indicating different mean ages between the categories intact, neutered, obese, and obese after weight loss among females and males. 
 
-```{r make-table-3, echo = FALSE}
+```{r table3, echo = FALSE}
 # Comment here
 meanaps_30 <- melted_obj %>%
   group_by(host_phenotype_s, Phylum, host_sex_s) %>%
