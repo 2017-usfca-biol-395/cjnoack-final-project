@@ -73,21 +73,49 @@ Now, the data given is fully processed. Before analysis, I created a metadata ta
 
 # Results
 
-I began my analysis using a grid plot in Figure 1 of the overall abundance of the four sample groups between males and females. In the figure, we see that males who are neutered are in the highest abundance, followed by males who are obese undergoing weight loss and females who are obese undergoing weight loss. In the least abundance is males who are intact, obese males, and females who are intact. Given this information, I went forward and created a density plot of the overall abundance of total mass between the four sample groups. While this did not include sex, it indicated that, generally, cats obese undergoing weight loss were the most dense. The second-most dense were the obese cats. The least dense were intact cats whom kept a generally uniform distribution of total mass. That cats who were neutered were neither most or least dense, but showed the greatest range of total body mass (Figure 2).
+I begin my analysis by showing a general outlook of the data. A grid plot shows the abundance of  the sample groups (lean intact, lean neutered, obese neutered before weight loss and after weight loss) in Figure 1. We see neutered males are in the highest abundance. Females are in less abundance, with the highest being obese after energy restriction. The least abundant of the data is males who are intact, obese males, and females who are intact. 
+
+Sometimes, a density plot can give a better idea of abundance than a grid plot. In a density plot, I plot overall abundance to total body mass (Figure 2). While the plot does not include sex of the cats, it indicates a trend. Generally, cats obese undergoing weight loss are the most dense. The second-most dense were the obese cats. This was close to findings in Figure 1. Lean, intact cats within the sampling distribution are overall in less abundance. They show a uniform distribution in mass. Neutered cats show the greatest range of total body mass (Figure 2). 
+
+In sum, males are the most dominant in the samples. Especially the obese cats undergoing energy restriction. Females were the least dominant in the samples. Especially lean, intact female cats. 
+
+Next, I decided to look explicitly into body mass in the cats. 
 
 **The role of body mass**
 
-After analyzing the abundance of different phenotypes by sex and the distribution of body masses, I wanted to look deeper into the body mass question. What were the mean body masses among the four phenotypes for both male and female cats? In Table 1, the phenotype with the highest mean body mass are the obese undergoing weight loss female cats, followed by obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the intact male cats, followed by intact females. The medians of body mass are obese male cats and neutered female cats. Given the information in Table 1, I wanted to see it visually. Figure 3 depicts Table 1, and in it we see that the difference between females and males in terms of body mass to phenotype is not very significant. The most difference is between intact females and males. The obese cats undergoing weight loss are nearly similar between males and females. We see the general trend of increased body mass and phenotype along both sexes with males being generally larger. 
+I first asked what were the mean body masses among the four phenotypes for both male and female cats? 
+
+Phenotypes against mean body masses and sex were put into a table (Table1). The phenotype with the highest mean body mass are the obese male cats. The second highest mean body mass were the obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the neutered female cats, followed by intact males. The medians of body mass are obese male cats and neutered female cats. The information in the table can be put on a graph for better interpretation, so that's what I did. 
+
+We do not see differences between females and males in terms of patterns of body mass to phenotype (Figure 3). Male and female cats tend to follow a similar pattern. The largest difference, if any, is between intact females and males. The obese cats undergoing weight loss are nearly similar between males and females.  With this in mind, males and females generally follow a similar trend of increased body mass when neutered vs. intact. But, males will be generally larger than females within every phenotype (Figure 3). 
+
+In sum, male cats were on average larger than female cats. The lightest phenotypes were intact, not neutered. 
+
+Following my analysis of body mass, I determined to look for support from the microbial community found in the cat's gut. 
 
 **The role of microbial communities**
 
-Next, I wanted to see which microbial communities were playing a role, if at all. Thus, I made a density plot indicating the abundance of certain microbial communities in different phenotypes and sexes. Figure 4 indicates the lower range of body masses from the data, while Figure 5 shows the upper range. I divided these graphs for better visualization of the data as there were many data points to take into account. In Figure 4, we see that female cats dominate the lower weight range class among all phenotypes, showing a fairly normal distribution. Firmicutes shows the highest abundance in the lower weight ranges of both males and females. In Figure 5, males dominate the upper body weight range with uneven peaks, while females have a moderate range with only two dominant peaks. Firmicutes, again, have the highest density of both males and females. Visibly, Bacteriodetes also have a high density between the two sexes. Proteobacteria and Fusobacteria have intense fluctuations between sex and body mass. 
+Two density plots show which microbial communities appear in phenotype and sex (Figure 4 and Figure 5). The two plots are either the lower and upper weight ranges for the cats. I divide the plots for better visualization of the data as there were many data points to take into account. We see in the lower range of body masses, female cats dominate among all phenotypes. They show a fairly normal distribution (Figure 4). The phylum Firmicutes is the most abundant in the lower weight ranges for both males and females. Males dominate the upper body weight range and have two uneven peaks. In the upper body weight range, females have a moderate appearance with two peaks (Figure 5). Again, Firmicutes have the highest density of both males and females. In both plots, the phylum Bacteriodetes appears in both females and males. We also see phyla Proteobacteria and Fusobacteria fluctuate between sex and body mass (Figure 5). 
 
-The microbial community question continued to linger, so I dug further. In Figure 6, I used a grid plot instead for better visualization of my question. We see a new phylum option as 'not applicable' having the highest abundance of female and male cats. After, Firmicutes, Bacteriodetes, and Actinobacteria. The lowest abundance is Fusobacteria, Proteobacteria, and Tenericutes.
+The microbial community question continued to linger, so I dug further. 
+
+A grid plot is used for better visualization of my question. A new category called not applicable (N/A) occurs the most between females and males (Figure 6). After not applicable, Firmicutes, Bacteriodetes, and Actinobacteria occur the most. The phyla which occur least are Fusobacteria, Proteobacteria, and Tenericutes.
+
+In sum, the dominating microbial phyla are unknown phylas, Firmicutes, Bacteriodetes, and Actinobacteria. The least dominant phyla are Fusobacteria, Proteobacteria, and Tenericutes. Females and males do not differ in microbial communities given the data.
+
+Finally, I used the analysis of age as the final support for my hypothesis. 
 
 **The role of age**
 
-Lastly, I wanted to see if age played a role between the sexes when it came to remaining obese. In Figure 7, we use the data from Table 2 to see the mean ages across the phenotypes. In Table 2, we see the neutered females, and obese (with or without weight loss) females are the oldest. The neutered males, intact males, and obese males are the youngest. In Figure 7, we see females in all phenotypes have the larger mean age groups while males dominate the younger age groups. The intact cats have similar mean age patterns between males and females. The neutered, obese, and obese undergoing weight loss phenotypes show the strongest variance between the sexes. Next, I wanted to find out the mean sex across the bacteria phylas and cat phenotypes for females and males. This would be a far more hefty task. In Table 3, we see that females are still, on average, older. Intact phenotypes have considerably less bacteria phyla indicated here than the other phenotypes. Females on average are still older than males. I wanted to visualize the data in the best way possible, so a bar graph seemed like an effective solution. In Figure 8, we see the intact phenotype has three fewer bacterial phyla than the other phenotypes. Neutered phenotypes have older ages, on average. Obese and obese undergoing weight loss typically have similar ages as well as bacterial phylas. 
+I asked whether age is a factor between sex and remaining obese after neutering. 
+
+In a table, I put mean ages across phenotypes (Table 2). Neutered females and female obese cats (before and after weight loss) are the oldest of the sample. Neutered males, intact males, and obese males are the youngest of the sample (Table 2). The table is then put into a figure for visualization. Females appear to have a larger mean age and males dominate the younger age groups (Figure 7). Intact cats all have fairly similar age patterns for both males and females. Neutered obese before and after energy restriction have the most age variance between males and females (Figure 7). 
+
+In order to weave everything together, mean age is put against bacterial phylas for females and males (Table 3). It's a hefty task. We see females still dominate, on average, the older age groups. Compared to other phenotypes, intact lean cats have considerably less bacteria phyla. The dominating theme is that females are, on average, still older than the males. 
+
+Visualizing the hefty amount of data from the table could be many different plots. I chose bar plot as the most effective solution for visualization. We see that the intact lean phenotype will have three less bacterial phyla than obese or lean neutered phenotypes (Figure 8). On average, the neutered phenotypes of both lean and obese cats have older ages. Intact phenotypes are typically younger. The obese cats, both before and after energy restriction, have similar ages and similar bacterial phylas. Neutered phenotypes have older ages, on average. Obese and obese undergoing weight loss typically have similar ages as well as bacterial phylas. 
+
+In sum, neutered obese female cats are older and male intact cats are youngest of the sample. Intact cats have three less bacterial phyla than the neutered phenotypes. Neutered, either lean or obese, was eldest of the sampling overall. Obese cats have similar ages and bacterial phyla.
 
 ```{r load-libraries, echo=FALSE, message = FALSE}
 # Be sure to install these packages before running this script
@@ -140,7 +168,8 @@ melted_obj <- psmelt(phyloseq_obj)
 ```{r gridplot-sex-abundance-phenotype}
 # First figure indicating the general schema of the data
 ggplot(data = melted_obj,
-          aes(x = host_sex_s, y = Abundance)) +
+          aes(x = host_sex_s, 
+              y = Abundance)) +
   geom_point() +
   facet_grid(. ~ host_phenotype_s) +
   labs(title = "Abundance of male and female cats with different phenotypes",
@@ -186,7 +215,9 @@ meanmass_8 %>%
              fill = host_phenotype_s)) +
     geom_col(position = "dodge") +
   ggtitle("Cat sex to mean body mass over four phenotypes") +
-  xlab("Cat Sex") + ylab("Mean Body Mass") + labs(fill = "Cat Phenotype")
+  xlab("Cat Sex") + 
+  ylab("Mean Body Mass") + 
+  labs(fill = "Cat Phenotype")
 ```
 
 **Figure 3**: Using the table, the mean body mass visualized with a bar graph. 
