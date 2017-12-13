@@ -114,11 +114,11 @@ library("phyloseq")
 devtools::install_github("ropenscilabs/gramr")
 ```
 
-```{r}
+```{r phyloseq-object, echo = FALSE}
 load("output/phyloseqobject.RData")
 ```
 
-```{r meltedtable, echo=FALSE}
+```{r meltedtable, echo = FALSE}
 # Compile into a table
 melted_obj <- psmelt(phyloseq_obj)
 ```
@@ -165,7 +165,7 @@ meanmass_8 %>%
 
 **Table 1**: Mean body mass among phenotypes and sexes. 
 
-```{r}
+```{r sex-mass-phenotype-barplot}
 meanmass_8 %>%
   ggplot(aes(x = host_sex_s,
              y = mean_bodymass,
@@ -233,7 +233,7 @@ meanage_10 %>%
 
 **Table 2**: A table of the mean ages for each phenotype in male and female cats. 
 
-```{r baplot-phenotype-sex-age, echo = FALSE}
+```{r baplot-phenotype-sex-age}
 # Comment here
 meanage_10 %>%
   ggplot(aes(x = host_phenotype_s,
@@ -264,7 +264,7 @@ meanaps_30 %>%
 
 **Table 3**: A table indicating mean ages for the different cat phenotypes, bacteria phylas, and sex. 
 
-```{r barplot-age-phenotype-phylum, echo = FALSE}
+```{r barplot-age-phenotype-phylum}
 # Comment here
 meanaps_30 %>%
   ggplot(aes(x = host_phenotype_s,
