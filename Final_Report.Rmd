@@ -3,8 +3,8 @@ title: "Final Report: The Effects of Neutering on Female and Male Adult Cats"
 author: "Chelsea Noack"
 date: "December 18, 2017"
 output:
-    github_document: default
     word_document: default
+    github_document: default
 bibliography: references.bib
 csl: bioinformatics.csl
 ---
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-The affection for fat cats is an affliction. As a culture, we glorify at cats which are overweight or obese. For what we often mistake as chubby cuteness is a danger to the animals. Fat cats are at risk for diseases such as diabetes type 2, lameness (a dysfunction in the locomotor system), oral cavity disease, urinary tract disease, and neoplasia (abnormal tissue growth [@takosova2016feline]. Diabetes type 2 leads to less insulin which balances blood, sugar, or glucose levels. Lameness, while not considered an illness, makes a cat's life more difficult by needing to limp. Oral cavity disease is an inflammatory and ultimately debilitating sickness. Urinary tract disease encompasses many problems for a cat's urethra or bladder. Lastly, neoplasia can be a non-cancerous or tumorous growth, both undesirable. The life of a fat cat becomes hindered and limited in basic day-to-day activities as well. Being obese makes it more difficult to fit in tight spaces, run, jump, and breathe. The list is unfortunately long. 
+The affection for fat cats is an affliction. As a culture, we glorify at cats which are overweight or obese. For what we often mistake as chubby cuteness is a danger to the animals. Fat cats are at risk for diseases such as diabetes type 2, lameness (a dysfunction in the locomotor system), oral cavity disease, urinary tract disease, and neoplasia (abnormal tissue growth [@tarkosova2016feline]. Diabetes type 2 leads to less insulin which balances blood, sugar, or glucose levels. Lameness, while not considered an illness, makes a cat's life more difficult by needing to limp. Oral cavity disease is an inflammatory and ultimately debilitating sickness. Urinary tract disease encompasses many problems for a cat's urethra or bladder. Lastly, neoplasia can be a non-cancerous or tumorous growth, both undesirable. The life of a fat cat becomes hindered and limited in basic day-to-day activities as well. Being obese makes it more difficult to fit in tight spaces, run, jump, and breathe. The list is unfortunately long. 
 
 In the United States, we find that obesity in felines is one of the most predominant nutritional disorders. Between 11.5% and 63% of cats being overweight or obese [@tarkosova2016feline]. So, what causes obesity in felines? 
 
@@ -157,6 +157,7 @@ devtools::install_github("ropenscilabs/gramr")
 ```
 
 ```{r phyloseq-object, echo = FALSE}
+# Load the phyloseq object for quick upload
 load("output/phyloseqobject.RData")
 ```
 
@@ -166,7 +167,7 @@ melted_obj <- psmelt(phyloseq_obj)
 ```
 
 ```{r gridplot-sex-abundance-phenotype}
-# First figure indicating the general schema of the data
+# Create first figure showing general schema of data
 ggplot(data = melted_obj,
           aes(x = host_sex_s, 
               y = Abundance)) +
@@ -179,7 +180,7 @@ ggplot(data = melted_obj,
 **Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss. 
 
 ```{r density-mass-phenotype}
-# Second figure using density to show the range of body mass to phenotype
+# Create second figure showing density of body mass to phenotype
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
   geom_density(alpha = 0.1) +
@@ -193,7 +194,7 @@ ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
 **Figure 2**: A density plot of host's total mass to its phenotype. 
 
 ```{r tableone, echo = FALSE}
-# Comment here
+# Create first table for phenotype, sex, and mass
 meanmass_8 <- melted_obj %>%
   group_by(host_phenotype_s, host_sex_s) %>%
   summarize(mean_bodymass = mean(host_tot_mass_s)) %>%
@@ -209,6 +210,7 @@ meanmass_8 %>%
 **Table 1**: Mean body mass among phenotypes and sexes. 
 
 ```{r sex-mass-phenotype-barplot}
+# Create figure showing data from table one
 meanmass_8 %>%
   ggplot(aes(x = host_sex_s,
              y = mean_bodymass,
@@ -223,7 +225,7 @@ meanmass_8 %>%
 **Figure 3**: Using the table, the mean body mass visualized with a bar graph. 
 
 ```{r density-sex-lowermass-phylum}
-# Comment here
+# Create figure for lower mass and bacterial phyla
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
@@ -237,7 +239,7 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
 **Figure 4**: A density plot of the lower range weight class of females and males and the correlating Phylums. 
 
 ```{r density-sex-uppermass-pylum}
-# Comment here
+# Create figure for upper mass and phyla
 melted_obj %>%
 ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
   geom_density(alpha = 0.1) +
@@ -251,7 +253,7 @@ ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
 **Figure 5**: A density plot of the upper range weight class of females and males and the correlating Phylums. 
 
 ```{r gridplot-abundance-sex-phylum}
-# Comment here
+# Create figure for total phyla abundance
 ggplot(data = melted_obj,
           aes(x = host_sex_s, y = Abundance)) +
   geom_point() +
@@ -263,7 +265,7 @@ ggplot(data = melted_obj,
 **Figure 6**: A grid plot of the abundance of bacterial phylums in both males and females. 
 
 ```{r table2, echo = FALSE}
-# Comment here
+# Create second table for ages, phenotype, and sex
 meanage_10 <- melted_obj %>%
   group_by(host_phenotype_s, host_sex_s) %>%
   summarize(mean_age = mean(host_age_s)) %>%
@@ -279,7 +281,7 @@ meanage_10 %>%
 **Table 2**: A table of the mean ages for each phenotype in male and female cats. 
 
 ```{r baplot-phenotype-sex-age}
-# Comment here
+# Create figure showing data from table two
 meanage_10 %>%
   ggplot(aes(x = host_phenotype_s,
              y = mean_age,
@@ -294,7 +296,7 @@ meanage_10 %>%
 **Figure 7**: A bar plot indicating different mean ages between the categories intact, neutered, obese, and obese after weight loss among females and males. 
 
 ```{r table3, echo = FALSE}
-# Comment here
+# Create large table for phyla, ages, phenotypes, and sex
 meanaps_30 <- melted_obj %>%
   group_by(host_phenotype_s, Phylum, host_sex_s) %>%
   summarize(mean_agephylumsex = mean(host_age_s)) %>%
@@ -310,7 +312,7 @@ meanaps_30 %>%
 **Table 3**: A table indicating mean ages for the different cat phenotypes, bacteria phylas, and sex. 
 
 ```{r barplot-age-phenotype-phylum}
-# Comment here
+# Create figure to best depict table three
 meanaps_30 %>%
   ggplot(aes(x = host_phenotype_s,
              y = mean_agephylumsex,
