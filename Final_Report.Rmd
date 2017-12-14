@@ -169,7 +169,7 @@ melted_obj <- psmelt(phyloseq_obj)
 ```{r gridplot-sex-abundance-phenotype}
 # Create first figure showing general schema of data
 ggplot(data = melted_obj,
-          aes(x = host_sex_s, 
+          aes(x = host_sex_s,
               y = Abundance)) +
   geom_point() +
   facet_grid(. ~ host_phenotype_s) +
@@ -217,8 +217,8 @@ meanmass_8 %>%
              fill = host_phenotype_s)) +
     geom_col(position = "dodge") +
   ggtitle("Cat sex to mean body mass over four phenotypes") +
-  xlab("Cat Sex") + 
-  ylab("Mean Body Mass") + 
+  xlab("Cat Sex") +
+  ylab("Mean Body Mass") +
   labs(fill = "Cat Phenotype")
 ```
 
