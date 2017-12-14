@@ -3,8 +3,8 @@ title: "Final Report: The Effects of Neutering on Female and Male Adult Cats"
 author: "Chelsea Noack"
 date: "December 18, 2017"
 output:
-    word_document: default
     github_document: default
+    word_document: default
 bibliography: references.bib
 csl: bioinformatics.csl
 ---
