@@ -1,7 +1,7 @@
 ---
-title: "Final Report: Your Title Here"
-author: "Don Francisco"
-date: "November 22, 2017"
+title: "Final Report: The Effects of Neutering on Female and Male Adult Cats"
+author: "Chelsea Noack"
+date: "December 18, 2017"
 output:
     github_document: default
     word_document: default
@@ -9,41 +9,401 @@ bibliography: references.bib
 csl: bioinformatics.csl
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # Introduction
 
-Add about 2-3 pages here. Across the whole manuscript, you should cite at least 20 peer reviewed articles.
+The affection for fat cats is an affliction. As a culture, we glorify at cats which are overweight or obese. For what we often mistake as chubby cuteness is a danger to the animals. Fat cats are at risk for diseases such as diabetes type 2, lameness (a dysfunction in the locomotor system), oral cavity disease, urinary tract disease, and neoplasia (abnormal tissue growth [@tarkosova2016feline]. Diabetes type 2 leads to less insulin which balances blood, sugar, or glucose levels. Lameness, while not considered an illness, makes a cat's life more difficult by needing to limp. Oral cavity disease is an inflammatory and ultimately debilitating sickness. Urinary tract disease encompasses many problems for a cat's urethra or bladder. Lastly, neoplasia can be a non-cancerous or tumorous growth, both undesirable. The life of a fat cat becomes hindered and limited in basic day-to-day activities as well. Being obese makes it more difficult to fit in tight spaces, run, jump, and breathe. The list is unfortunately long. 
+
+In the United States, we find that obesity in felines is one of the most predominant nutritional disorders. Between 11.5% and 63% of cats being overweight or obese [@tarkosova2016feline]. So, what causes obesity in felines? 
+
+The causes of obesity are difficult to pinpoint. Diet is a huge factor. Owners often over-estimate how much a cat needs to eat. Or a cat will have an increased appetite due to hormones. Genetics also plays a factor. Like humans, cats can inherit slow metabolisms, making digestion slower. Even molecular factors. For example, FT4, free serum throxine, has a specific range within the thyroid which is optimal. When FT4 increases outside the range, chances of obesity increases. This occurs in both humans and felines [@ferguson2007obesity]. With the many causes of obesity, it is difficult to pinpoint *how* best to prevent feline obesity. 
+
+Yet, one other factor remains, and that is neutering.
+
+Many studies point to a relationship between neutering and weight gain. A study done by Kanchuck et al. attempts to find out what the cause of post-neutering obesity was. They observe two possibilities, either increased food intake or less energy expenditure. They find that after neutering, cats increase their appetite and food intake [@kanchuk2003weight]. Decreased energy expenditure did not play a statistically significant role. And while most studies find a relationship, they do not pinpoint *how* neutering plays a role.
+
+Yet, neutering is important for population control, conservation, feline health and human health. 
+
+Humans and felines have shared the same space for over 9,000 years. But, felines in an urban population is a health hazard [@mendes2011reduction]. 
+
+Feral cats often dominate urban settings. They are outdoor cats with little to no human contact. Currently, there are approximately 50-80 million feral cats in the United States [@ireland2016spatial]. Reports estimate 80% of kittens born each year come from feral cats [@ireland2016spatial]. Feral cats are generalist predators, meaning they have a broad diet, they kill a lot of wildlife. Thus, they can be an invasive species. For example, on islands, cats contribute to 14% of bird, mammal, and reptile extinctions. They also contribute to 8% of critically endangered birds, mammals, and reptiles [@medina2011global]. 
+
+Along with to conservation issues, neutering promotes health for cats and humans. It can prevent diseases such as reproductive tract disease, testicular neoplasia, and hormone-associated disorders like vaginal prolapse [@kustritz2012effects]. Neutering can prolong a cats life and prevent cancers, especially breast and testicular. It can also prevent female cats from going into heat. This is good, as when a female cat goes into heat, they will cry and urinate more than usual for 4-5 days for three weeks. While it's a natural biological process, it is not desirable for a cat living indoors. Feral cats not under population control can spread disease to humans as well. Such diseases like rabies and toxoplasmosis are the most common [@ireland2016spatial]. 
+
+Thus, the topic becomes complicated. 
+
+Neutering is an effective and common way to tackle population control. Lack of population control contributes to conservation issues, human health, and feline health. This is why veterinarians and institutions such as the A.S.P.C.A (American Society for the Prevention of Cruelty to Animals) advise neutering cats. But, studies indicate that neutering also can lead to obesity. And as shown, obesity affects the health of the cat. The conundrum isn't clear. The only way to better clarify the issue is more data analysis from previous studies. As scientists whom care for animals, we have a responsibility to find out more about neutering and its long-term effects on feline health. In doing so, we can better understand the advantages or disadvantages after neutering. It can also inspire alternative methods for population control.
+
+My analysis attempts to use research done in a previous study to understand neutering's effects. I use data from a study titled *Effects of obesity, energy restriction and neutering on the faecal microbiota of cats* by Manuela M. Fischer, et al. (2017). 
+
+The study focuses on both obese and lean cats using their fecal DNA in a controlled environment. I hypothesize that first, neutering increases body mass. Second, that females will be more obese, especially after neutering. I base this hypothesis from what we already know about human females. The sex hormone, estrogen, in females contributes to weight gain [@grantham2014estrogen]. Because cats are companion animals to humans in the scientific community, I assume female cats have a similar mechanism. To further support my analysis, I will also look at the gut microbiome in the cats and the age of the cats. I argue that sex will play a bigger role when understanding neutering rather than gut microbiota or age. 
 
 # Methods
 
 ## Study design
 
-Add about half a page here. In this section instead of first person (I/we), use the authors of the paper you selected, since you'll just be describing what they did, based on the methods in their paper.
+Fischer et al. used twenty-four cats from the University of California, Davis with a median age of 6.4 years. All cats were pathogen free domestic shorthairs. From the twenty-four cats, eight of the cats were obese with four males and four females. Eight cats were lean and not neutered, again with four males and four females. Eight cats, six males and two females, were lean and neutered [@fischer2017effects]. All twenty-four cats had the same diet before and during the study. Every cat underwent a physical and blood sample before the experiment began.
+
+Cats which were lean and both neutered or not neutered housed together. All had the same diet *but* their intake was not measured. The night before the fecal sampling, the cats slept alone. Fischer et al. performed BCS (body composition scores) for each cat before sampling. 
+
+The obese, neutered cats underwent castration/spaying 1-6 years before the study [@fischer2017effects]. Unlike the lean cats, the obese cats slept alone. The obese neutered ate the normal diet given to all cats for ten days. For six weeks, they ate 60-70% of the prior intake. Again, unlike the lean cats, their intake was now measured. Fischer et al. recorded the cats' weights every week. They also recorded fecal samples before and after the dietary restriction began [@fischer2017effects].
 
 ## Sample origin and sequencing
 
-Add about half a page here. In this section instead of first person (I/we), use the authors of the paper you selected, since you'll just be describing what they did, based on the methods in their paper.
+Before sequencing the data, Fischer et al. collected fecal samples from the cat litter box once a day for three days straight. They monitored the cats and they did not collect any samples which were 15 minutes old. To get the bacterial DNA, Fischer et al. used bead-beating methods. Bead-beating is a way to release DNA, RNA, and proteins in the cells of a sample. They used a commercial DNA extraction kit [@fischer2017effects]. To bead-beat, samples go in tubes then on a homogenizer. A homogenizer which is a lab tool used to mix materials using high energy. They mixed "for 60 seconds at a speed of 4 m/s" [@fischer2017effects].
+
+The 16S rRNA amplified using a universal bacterial primer. A universal bacterial primers is important to interpret PCR results. Especially for microbial communities [@mao2012coverage]. PCR (polymerase chain reaction) is a technique used to make a lot of copies of a segment of DNA. 
+
+After PCR amplification, Fischer et al. added amplicon products of different samples. They purified the samples using AgencourtAmpure beads. The beads were important for high-throughput purification of the PCR amplicons. Then the samples combined in equal concentrations. Fischer et al. sequenced th samples using Roche 454 FLX titanium instruments [@fischer2017effects]. Pyrosequencing using instruments like Roche 454 have big advantages versus traditional Sanger sequencing. Primarily because they can examine many samples from many microbial communities [@tamaki2011analysis]. Once the raw sequences were complete, I downloaded them for my analysis. I downloaded them from NCBI's Sequence Read Archive RP066010. 
 
 ## Computational
 
-These are the methods you used to do your bioinformatic analyses analyses. Should probably be between 0.5 and 1 pages. At a very minimum should include citations for DADA2 and phyloseq if you are doing an amplicon study, or other citations as appropriate.
+First, I downloaded the data from the provided link. This was a two-part process. First, I had to download the SRAtoolkit from NCBI's website. Because the data I used was in .sra format, the toolkit converts it to .fastq. I wanted .fastq so I could perform a quality check later on. After downloading the toolkit, I performed a check to make sure it worked. The steps taken came from the toolkit's website. Once I assured that it worked, I wrote a Bash script which downloaded the data into my computer. Because the files were fairly small, this did not take much time. The files downloaded into my raw data folder and saved as fastq, thanks to the toolkit. 
+
+With the data downloaded into my computer, I transferred it to RStudio to begin my analysis. In order to do so, I downloaded necessary, but helpful, libraries. The libraries included dplyr, tidyr, knitr, ggplot2, citr, seqinr, mctoolsr, dada2, and phyloseq. Dplyr, tidyr, knitr, and ggplot2 are general use packages to help analyze the data. 
+
+DADA2 and phyloseq were extremely important for this process. DADA2 comes from bioconductor. Bioconductor serves as the primary package to clean up and analyze our data. DADA2 specifically cleans up amplicon errors [@callahan2016]. It can also extract sample names from their original .fastq names. Phyloseq takes on microbiome analysis in R [@mcmurdie2013]. Once all files downloaded and organized, I did a QC (quality check) report on each individual file. 
+
+Initially, I trimmed the files based off of only the QC scores (they dropped around ~400 bp). After later reviewing the amount of errors in the sequences, I decided to extend the trim to 600. To counterbalance this, I made sure the quality cut off was at a smaller number (originally at 5, now at 2). Thus, we would get more data to analyze with adequate quality. After a proper trim and error check, I deleted any duplicate sequences. 454 Roche technology sequenced the data, so I used the suggested parameters based off of DADA2's guidelines. This is when DADA2 proved to be vital, as it facilitated the process for my specific amplicon data set. In the final steps, I observed the distribution of trimmed and denoised sequences. While the data was poorly sequenced, for my purposes it would work alright. Then, I removed chimeras. 
+
+Now, the data given is fully processed. Before analysis, I created a metadata table and a melted table to observe during research. 
 
 # Results
 
-## Subsections are ok in the results section too
+I begin my analysis by showing a general outlook of the data. A grid plot shows the abundance of  the sample groups (lean intact, lean neutered, obese neutered before weight loss and after weight loss) in Figure 1. We see neutered males are in the highest abundance. Females are in less abundance, with the highest being obese after energy restriction. The least abundant of the data is males who are intact, obese males, and females who are intact. 
 
-```{r your-code-here}
-# Add code chunks as needed for your analyses
-# For most analyses, I would recommend splitting the
-# intensive computational part into a seperate R script file
-# and then just load your libraries and the data object here
-# using the `load()` function. Ask me for clarification if this is
-# unclear.
+Sometimes, a density plot can give a better idea of abundance than a grid plot. In a density plot, I plot overall abundance to total body mass (Figure 2). While the plot does not include sex of the cats, it indicates a trend. Generally, cats obese undergoing weight loss are the most dense. The second-most dense were the obese cats. This was close to findings in Figure 1. Lean, intact cats within the sampling distribution are overall in less abundance. They show a uniform distribution in mass. Neutered cats show the greatest range of total body mass (Figure 2). 
+
+In sum, males are the most dominant in the samples. Especially the obese cats undergoing energy restriction. Females were the least dominant in the samples. Especially lean, intact female cats. 
+
+Next, I decided to look explicitly into body mass in the cats. 
+
+**The role of body mass**
+
+I first asked what were the mean body masses among the four phenotypes for both male and female cats? 
+
+Phenotypes against mean body masses and sex were put into a table (Table1). The phenotype with the highest mean body mass are the obese male cats. The second highest mean body mass were the obese male cats undergoing weight loss. The phenotype with the lowest mean body mass are the neutered female cats, followed by intact males. The medians of body mass are obese male cats and neutered female cats. The information in the table can be put on a graph for better interpretation, so that's what I did. 
+
+We do not see differences between females and males in terms of patterns of body mass to phenotype (Figure 3). Male and female cats tend to follow a similar pattern. The largest difference, if any, is between intact females and males. The obese cats undergoing weight loss are nearly similar between males and females.  With this in mind, males and females generally follow a similar trend of increased body mass when neutered vs. intact. But, males will be generally larger than females within every phenotype (Figure 3). 
+
+In sum, male cats were on average larger than female cats. The lightest phenotypes were intact, not neutered. 
+
+Following my analysis of body mass, I determined to look for support from the microbial community found in the cat's gut. 
+
+**The role of microbial communities**
+
+Two density plots show which microbial communities appear in phenotype and sex (Figure 4 and Figure 5). The two plots are either the lower and upper weight ranges for the cats. I divide the plots for better visualization of the data as there were many data points to take into account. We see in the lower range of body masses, female cats dominate among all phenotypes. They show a fairly normal distribution (Figure 4). The phylum Firmicutes is the most abundant in the lower weight ranges for both males and females. Males dominate the upper body weight range and have two uneven peaks. In the upper body weight range, females have a moderate appearance with two peaks (Figure 5). Again, Firmicutes have the highest density of both males and females. In both plots, the phylum Bacteriodetes appears in both females and males. We also see phyla Proteobacteria and Fusobacteria fluctuate between sex and body mass (Figure 5). 
+
+The microbial community question continued to linger, so I dug further. 
+
+A grid plot is used for better visualization of my question. A new category called not applicable (N/A) occurs the most between females and males (Figure 6). After not applicable, Firmicutes, Bacteriodetes, and Actinobacteria occur the most. The phyla which occur least are Fusobacteria, Proteobacteria, and Tenericutes.
+
+In sum, the dominating microbial phyla are unknown phylas, Firmicutes, Bacteriodetes, and Actinobacteria. The least dominant phyla are Fusobacteria, Proteobacteria, and Tenericutes. Females and males do not differ in microbial communities given the data.
+
+Finally, I used the analysis of age as the final support for my hypothesis. 
+
+**The role of age**
+
+I asked whether age is a factor between sex and remaining obese after neutering. 
+
+In a table, I put mean ages across phenotypes (Table 2). Neutered females and female obese cats (before and after weight loss) are the oldest of the sample. Neutered males, intact males, and obese males are the youngest of the sample (Table 2). The table is then put into a figure for visualization. Females appear to have a larger mean age and males dominate the younger age groups (Figure 7). Intact cats all have fairly similar age patterns for both males and females. Neutered obese before and after energy restriction have the most age variance between males and females (Figure 7). 
+
+In order to weave everything together, mean age is put against bacterial phylas for females and males (Table 3). It's a hefty task. We see females still dominate, on average, the older age groups. Compared to other phenotypes, intact lean cats have considerably less bacteria phyla. The dominating theme is that females are, on average, still older than the males. 
+
+Visualizing the hefty amount of data from the table could be many different plots. I chose bar plot as the most effective solution for visualization. We see that the intact lean phenotype will have three less bacterial phyla than obese or lean neutered phenotypes (Figure 8). On average, the neutered phenotypes of both lean and obese cats have older ages. Intact phenotypes are typically younger. The obese cats, both before and after energy restriction, have similar ages and similar bacterial phylas. Neutered phenotypes have older ages, on average. Obese and obese undergoing weight loss typically have similar ages as well as bacterial phylas. 
+
+In sum, neutered obese female cats are older and male intact cats are youngest of the sample. Intact cats have three less bacterial phyla than the neutered phenotypes. Neutered, either lean or obese, was eldest of the sampling overall. Obese cats have similar ages and bacterial phyla.
+
+```{r load-libraries, echo=FALSE, message = FALSE}
+# Be sure to install these packages before running this script
+# They can be installed either with the intall.packages() function
+# or with the 'Packages' pane in RStudio
+
+# load general-use packages
+library("dplyr")
+library("tidyr")
+library("knitr")
+library("ggplot2")
+
+# this package allows for the easy inclusion of literature citations in our Rmd
+# more info here: https://github.com/crsh/citr
+# and here:
+# http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html
+library("citr")
+
+# These are the primary packages well use to clean and analyze the data
+# this package needs to be installed from bioconductor -- it's not on CRAN
+# see info here: https://benjjneb.github.io/dada2/dada-installation.html
+library("dada2")
+
+# This to export a fasta of our final denoised sequence variants
+library("seqinr")
+
+# To install this you have to install from GitHub
+# See more info here: https://github.com/leffj/mctoolsr
+# run this -- install.packages("devtools")
+# and then this -- devtools::install_github("leffj/mctoolsr")
+library("mctoolsr")
+
+# And this to visualize our results
+# it also needs to be installed from bioconductor
+library("phyloseq")
+
+# Install devtools package
+devtools::install_github("ropenscilabs/gramr")
 ```
 
-In addition to a minimum of 5-10 figures/tables (and associated captions), you should include sufficient text in this section to describe what your findings were. Remember that in the results section you just describe what you found, but you don't interpret it - that happens in the discussion. 2-3 pages.
+```{r phyloseq-object, echo = FALSE}
+# Load the phyloseq object for quick upload
+load("output/phyloseqobject.RData")
+```
+
+```{r meltedtable, echo = FALSE}
+# Compile into a table
+melted_obj <- psmelt(phyloseq_obj)
+```
+
+```{r gridplot-sex-abundance-phenotype}
+# Create first figure showing general schema of data
+ggplot(data = melted_obj,
+          aes(x = host_sex_s,
+              y = Abundance)) +
+  geom_point() +
+  facet_grid(. ~ host_phenotype_s) +
+  labs(title = "Abundance of male and female cats with different phenotypes",
+       x = "Sex of Cat")
+```
+
+**Figure 1:** A grid plot of abundance of female and male cats whom are intact, neutered, obese, and who were obese before weight loss. 
+
+```{r density-mass-phenotype}
+# Create second figure showing density of body mass to phenotype
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_phenotype_s)) +
+  geom_density(alpha = 0.1) +
+  xlim(3400, 7000) +
+  labs(title = "Distribution of body size in different phenotypes",
+       x = "Total Mass of Cats",
+       y = "Density",
+       fill = "Cat Phenotype")
+```
+
+**Figure 2**: A density plot of host's total mass to its phenotype. 
+
+```{r tableone, echo = FALSE}
+# Create first table for phenotype, sex, and mass
+meanmass_8 <- melted_obj %>%
+  group_by(host_phenotype_s, host_sex_s) %>%
+  summarize(mean_bodymass = mean(host_tot_mass_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 8)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanmass_8 %>%
+  kable()
+```
+
+**Table 1**: Mean body mass among phenotypes and sexes. 
+
+```{r sex-mass-phenotype-barplot}
+# Create figure showing data from table one
+meanmass_8 %>%
+  ggplot(aes(x = host_sex_s,
+             y = mean_bodymass,
+             fill = host_phenotype_s)) +
+    geom_col(position = "dodge") +
+  ggtitle("Cat sex to mean body mass over four phenotypes") +
+  xlab("Cat Sex") +
+  ylab("Mean Body Mass") +
+  labs(fill = "Cat Phenotype")
+```
+
+**Figure 3**: Using the table, the mean body mass visualized with a bar graph. 
+
+```{r density-sex-lowermass-phylum}
+# Create figure for lower mass and bacterial phyla
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
+  geom_density(alpha = 0.1) +
+  xlim(2500, 5000) +
+  ggtitle("Lower range body mass to bacterial phyla and cat sex") +
+  xlab("Cat total mass") +
+  ylab("Density") +
+  labs(fill = "Cat sex", colour = "Bacteria phylum")
+```
+
+**Figure 4**: A density plot of the lower range weight class of females and males and the correlating Phylums. 
+
+```{r density-sex-uppermass-pylum}
+# Create figure for upper mass and phyla
+melted_obj %>%
+ggplot(aes(host_tot_mass_s, fill = host_sex_s, colour = Phylum)) +
+  geom_density(alpha = 0.1) +
+  xlim(5500, 7000) +
+    ggtitle("Upper range body mass to bacterial phyla and cat sex") +
+  xlab("Cat total mass") +
+  ylab("Density") +
+  labs(fill = "Cat sex", colour = "Bacteria phylum")
+```
+
+**Figure 5**: A density plot of the upper range weight class of females and males and the correlating Phylums. 
+
+```{r gridplot-abundance-sex-phylum}
+# Create figure for total phyla abundance
+ggplot(data = melted_obj,
+          aes(x = host_sex_s, y = Abundance)) +
+  geom_point() +
+  facet_grid(. ~ Phylum) +
+  labs(title = "Abundance of male and female cats to bacterial phylum",
+       x = "Sex of Cat")
+```
+
+**Figure 6**: A grid plot of the abundance of bacterial phylums in both males and females. 
+
+```{r table2, echo = FALSE}
+# Create second table for ages, phenotype, and sex
+meanage_10 <- melted_obj %>%
+  group_by(host_phenotype_s, host_sex_s) %>%
+  summarize(mean_age = mean(host_age_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 10)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanage_10 %>%
+  kable()
+```
+
+**Table 2**: A table of the mean ages for each phenotype in male and female cats. 
+
+```{r baplot-phenotype-sex-age}
+# Create figure showing data from table two
+meanage_10 %>%
+  ggplot(aes(x = host_phenotype_s,
+             y = mean_age,
+             fill = host_sex_s)) +
+    geom_col(position = "dodge") +
+  labs(title = "Male and female phenotypes measured to mean age",
+       x = "Cat Phenotype",
+       y = "Cat Age",
+       fill = "Cat Sex")
+```
+
+**Figure 7**: A bar plot indicating different mean ages between the categories intact, neutered, obese, and obese after weight loss among females and males. 
+
+```{r table3, echo = FALSE}
+# Create large table for phyla, ages, phenotypes, and sex
+meanaps_30 <- melted_obj %>%
+  group_by(host_phenotype_s, Phylum, host_sex_s) %>%
+  summarize(mean_agephylumsex = mean(host_age_s)) %>%
+  arrange(desc(host_phenotype_s)) %>%
+  head(n = 50)
+
+# then we can use the `kable()` function to make a nicely formatted
+# markdown table
+meanaps_30 %>%
+  kable()
+```
+
+**Table 3**: A table indicating mean ages for the different cat phenotypes, bacteria phylas, and sex. 
+
+```{r barplot-age-phenotype-phylum}
+# Create figure to best depict table three
+meanaps_30 %>%
+  ggplot(aes(x = host_phenotype_s,
+             y = mean_agephylumsex,
+             fill = Phylum)) +
+    geom_col(position = "dodge") +
+    labs(title = "Phenotypes and bacterial phyla measured to mean age",
+       x = "Cat Phenotype",
+       y = "Cat Age",
+       fill = "Phylum")
+```
+
+**Figure 8**: A bar plot showing age against phylum and category of intact, neutered, obese, and obese after weight loss. 
 
 # Discussion
 
-Add around 3-4 pages interpreting your results and considering future directions one might take in analyzing these data.
+I hypothesized that female cats are more obese than male cats after neutering. However, the data indicates opposite results. 
+
+Male cats are heavier than female cats within all phenotypes; intact, neutered, obese, and obese with energy restriction (Table 1). Supplementary studies support the finding that male cats gain weight quickly after neutering. The timing in which male cats are neutered is important. The range of neutering during sexual development is both early, weeks 3-10, and late, weeks 34-41. Neutering during these time periods alters feeding behaviors [@allaway2016metabolic].
+
+First, I contend that there is a skew in the data when it comes to the abundance of male cats versus female cats as shown in Figure 1. A potential bias can occur by having more male cats in the sample. Still, the chance of the bias being the reason male cats are heavier is slight. I argue there is *some* reason why male cats are heavier than the female cats. 
+
+**Male cats are more obese than female cats**
+
+We found that the obese cats appeared most in the data (Figure 2). They had the thickest density of sequences in our data. I found this interesting. In the study design, there were more lean cats, both intact and neutered, than the eight obese cats in total. In fact, the intact lean cats generally had a uniform distribution of total mass. Neutered lean cats had the greatest range of total body mass, which counters my hypothesis as well. I expected neutered cats to be the heaviest, specifically females. Rather the data here shows that neutered lean cats will have a wide variety of body masses. I decided to dig deeper.
+
+To review, I found that female, neutered obese cats are *not* heavier than the male cats. This was both before and after energy restriction. After undergoing energy restriction, the male cats retain almost the same body mass (Table 1). In contrast, the female cats lost weight much easier. This was surprising, as I expected the opposite. 
+
+What did support my hypothesis was that intact cats were lighter than neutered cats (Figure 3). The general pattern indicates that, as predicted, cats weigh more after neutering. Regardless of sex. I am hesitant to say this is a general pattern, despite the results. The data I used is from a controlled experiment with only a select number of cats. While studying mammals is difficult, I argue that they do not reflect every cat. Especially those which are feral or whom live in other environments.
+
+Yet, my data and previous studies do tend to show the same pattern. For example, a study done by Wei et al. revealed a behavior about neutered cats (2014). When neutered cats have open access to food, there is a significant increase of food intake and weight (2014). They also found that concentrations of ghrelin increased and adiponectin levels decreased. The findings indicate that there is an initial post-neutering weight gain [@wei2014early]. As scientists, we cannot make hard and fast conclusions that intact cats will always be more lean. But, as stated above, there is a lot of data supporting that they will. 
+
+I found that were male cats more obese than females after neutering. But why? 
+
+After reading about Wei's study, I looked into ghrelin and adiponectin as factors to weight gain. Grehlin is a hunger hormone, which plays a role in meal initiation [@klok2007role]. The adipose tissue in the endocrine system secretes adiponectin. The secretion of adiponectin is highly influential on testosterone. This is why we often find it more in human females than in human males [@robinson2011clinical]. While humans and cats are not perfectly  alike, cats are still considered a companion animal to study. So, I argue that there might be connection between the amount of the ghrelin and adiponectin and the sex of the cat. Perhaps these hormones are distributed more in male cats for some reason and less in females? Answers for this particular question will have to be saved for further research. 
+
+Another part of my findings were that obese male cats had a tougher time losing weight than the females (Table 1). Why?
+
+I'm inclined to think that this speaks to a molecular issue rather than a behavioral one. Male cats might have different lipid retentions than females. Or their regulatory pathways for metabolism might be different. With all these possibilities, I argue there is *much* more to the story than solely genetics, heredity, or environment. Rather, it is feasible that there are many things contributing simultaneously. 
+
+In sum, we find that male cats are more obese than female cats, even after energy restriction. This is counter to my hypothesis. However, intact cats are lighter than neutered cats. This supports my hypothesis that neutering will cause a cat to become heavier. Next, I look into how the bacteria within the cat's gut plays a role.
+
+**Bacterial phylas Proteobacteria, Tenericutes, and N/A do not show up in intact cats**
+
+I considered how the bacteria in the cat's gut could have a role in obesity. I decided to do this because of its role studied in dogs. In a study done by Kieler et al., they found that the composition of the gut microbiome in dogs played an effective role in weight loss (2017). Thus, if there is a relationship in gut bacteria and weight loss for dogs, perhaps there is one for cats. 
+
+To begin, I did not find any bacterial phyla associated only for male cats or only for female cats. There are minimal differences in phyla based on the cat's status and age. I cannot say my findings here will provide the support I desired for my analysis. Also, I admit that the mammalian GI tract is highly diverse [@suchodolski2011intestinal]. Looking for a single bacterial phyla affiliated with obesity/neutering is like looking for a needle in a haystack. Given that, there are a couple stand out phyla which I take into consideration.
+
+Firmicutes and Bacteriodetes, for an example, make an appearance across the lower body mass range and upper body mass range (Figure 4 & 5). Firmicutes did appear most frequently within all body mass sizes. Given that, my initial reaction is that it is *not* playing a direct role on weight or is directly influenced by neutering. However, the overabundance of Firmicutes and Bacteriodetes is consistent with previous studies. These studies also pertain to feline fecal microbial communities [@ritchie2010characterization]. 
+
+There is one inconsistency in Firmicutes and Bacteriodetes. In previous studies, lean mammals typically have less Firmicutes and more Bacteriodetes. In the data set by Fischer et al., there are more Firmicutes and less Bacteriodetes in lean cats [@fischer2017effects]. Fischer et al. found this as well and suggest that it speaks to a difference on the Class, Family, or Order level rather than broad Phylum level. All of which confirms the necessity of a future analysis. The analysis would be on the different classes of Firmicutes and Bacteriodetes in lean neutered and obese neutered cats. 
+
+Given the consistencies of particular phyla in the cats, what I then want to understand is the bacteria phyla which appeared *less* often. In doing so, it might open up the story about the cat's gut microbiome.
+
+We saw that all neutered cats, both lean and obese, had three extra bacterial phylas than the intact cats in Table 3 and Figure 8. The phyla are Proteobacteria, Tenericutes, and not applicable (N.A). The not applicable is not surprising, as we still do not know all the phylas of bacteria, especially in the gut microbiome. Thus, I cannot say much more about the unknown, despite its dominance. But I can explore Proteobacteria and Tenericutes. 
+
+Proteobacteria is the phyla most commonly found in healthy cats, as shown in a study done by Older et al. in 2017 observing healthy cats to allergic cats. This is at first confusing. Why would a bacterial phyla commonly found in healthy cats not exist in the intact cats? This is where I circled back to my main points on *why* neutering is so important. Neutering is not only for population control. It is also prevents disease and keeps felines healthy. Perhaps the reason we see the lack of Proteobacteria is because intact cats are generally less healthy. I'm unconvinced that this is the only reason, as I predict they probably *have* it, but the sequencing didn't pick up on enough of it. I base this off of other analyses in which Proteobacteria is prone to show up in most every organism. I can only assume that the amount was just smaller in the intact, thus appearing vacant. 
+
+Tenericutes, on the other hand, are often found in the placenta microbiome. But it has many roles. I did not find anything explicitly connecting Tenericutes to obese cats, but more research can always be done.
+
+In sum, we find that Firmicutes are probably not playing a role in my hypothesis. Thus, I cannot support my hypothesis using bacterial phyla. However, I find that the Bacteriodetes and Firmicutes have contrasting relationships from humans. This tells me more research must be done on smaller levels (class, family, order, etc). The future research is important because we share bacteria with cats [@song2013cohabiting]. Knowing about their microbiome can tell us a lot about ourselves as well. 
+
+For additional support, I finally look to the role age plays into obesity, sex, and neutering. 
+
+**From our data, age does not play an explicit role**
+
+I chose to look at age because of previous studies. Typically, felines undergo neutering early in life [@deusch2015longitudinal]. In a study done by Deusch et al., they sought out connections between feline fecal microbiome, age, diet, environment, and gender (2015). Stopping sexual development before achieving reproductive age has, hypothetically, some effect. They find that age of neutering was the only variable with a  statistical association to altered fecal microbiomes. And, in the same vein, for overall feline health. Other studies also find this same relationship, but in humans [@mariat2009firmicutes]. So, I asked if there would also be a relationship in felines? If so, would it also effect neutering and weight gain/maintenance? Specifically, is neutering at a younger or older age contributing to weight gain? And are older females/males more sensitive to age's influence? 
+
+I find that within the data provided by Fischer et al., neutered and obese females were the oldest (Table 2). I'm inclined to believe that males are neutered early, atleast at UC Davis where these cats are. The timing of neutering can shift the production of certain hormones. Such hormones can lead to weight gain. Noticeably, lean intact cats have no age difference between the males and females (Figure 7). So why would intact show no difference but neutered would show such a drastic one? This might be a sample design issue. If I were to re-do the experiment, I would attempt to get cats all within a more narrow, similar age range. This implies that age plays a more specific role. If that's the case, narrowing the age groups would show that better. 
+
+To go back to Deusch et al.'s findings, I examined age to bacterial phylas. We saw females are still, on average, older (Table 3). I'm hesitant to use my findings to make a claim about the relationship between age, sex, neutering, and body mass. Due to the sample design, the age of all cats are too broad of a range. As a reminder, the lean intact cats were 1-10 years old. The lean neutered cats were 4-12 years old. The obese neutered were a staggering 1-11 years old. Any of the cats castrated or spayed had done so within a large window of 1-6 years. The broad ranges mentioned above all lead me to dismiss the findings of age given the study design. 
+
+For the future, I would find similar spay and castration times. This could better help us understand what happens when certain sex hormones stop or start early in neutered cats. In sum, I dismiss age as a factor only due to the experimental data and design. I contend that, given another design with more narrow ranges, I could learn more about my original hypothesis.
+
+**Alternative Conclusions/Future Directions**
+
+Underlying my hypothesis was the presumption that the male and female hormones were complicit. What might be occurring the hormones working in tandem with other pathways. 
+
+Studies find that changes in NEFA suppression, caloric intake, and leptin concentrations may be indicators of obesity in cats after neutering [@hoenig2002effects]. NEFA are non-esterified fatty acids. As also indicated previously, ghrelin and adiponectin levels have some influence on the mass of humans, dogs, and felines. All of which desire further research.
+
+Additionally, we can also investigate the aforementioned abnormal concentrations of Firmicutes and Bacteriodetes. I would argue this is less of a priority than other avenues. I would want to combine a deeper look into the bacterial classes in cats of a specific sex, age, body mass, and time of neutering. Perhaps then, we can get a better idea of how the gut microbiome directly effects or is directly effected by neutering. 
+
+There is also metabolic rate to consider. It might differ among the cats, even on the level of sex. Studies show that weight loss becomes more difficult if the metabolic rate is different among cats of a certain sex or age of neutering [@fettman1997effects].
+
+Of course, there are factors which play a part that we cannot study on a molecular level. Factors such as breed, owner-pet relationship, and the owner's perception of cat's body size all can contribute. I could not find many studies have finished on the difficulty of losing weight based on a feline's breed. That could be a future direction. 
+
+Lastly, I must admit that my data also has a lot of errors. So much so that it causes great concern as to whether it influenced my results. And perhaps an improper conclusion. For this reason, I contend that improperly done sequencing techniques might have changed the story. The sample design didn't even include an obese intact phenotype, which also could have told a different story. In sum, I do not trust my data, but one never should. We can only hope for better sequencing for the future avenues of research.
+
+**Final Thoughts**
+
+From my analysis, I conclude that there is a lot of research left to do. Specifically on the underlying reasons *why* neutering causes weight gain. Females appear to not be larger than males, despite my earlier hypothesis. And I did not find a direct influence from the gut microbiome and age. If I were to continue, I would pick a more narrow range of study subjects. I would study the sex hormone levels of the felines right after neutering and closely monitor them. 
+
+The most important take away remains. While we joke about fat cats and their cuteness, the health risks attributed by obesity are severe. We have a responsibility, as pet owners and cat lovers, to find out the best ways to keep them healthy and happy. For if we are to be honest about our love for our furry friends, despite their often times weird ways of reciprocating, it is the least we can do.
 
 # Sources Cited
